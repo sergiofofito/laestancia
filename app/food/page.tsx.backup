@@ -1,0 +1,534 @@
+import React from "react"
+import { Navigation } from "@/components/navigation"
+
+type MenuItem = {
+  id: string;
+  name: string;
+  price?: string;
+  description?: string;
+  tags?: string[];
+}
+
+type MenuSection = {
+  id: string;
+  title: string;
+  subtitle?: string;
+  items: MenuItem[];
+  columns?: 1 | 2 | 3;
+}
+
+const sections: MenuSection[] = [
+  {
+    id: "to-start-cold",
+    title: "To Start — Cold",
+    items: [
+      {
+        id: "cold-cuts",
+        name: "Cold Cuts Selection",
+        price: "$19",
+        description: "Prosciutto, Salami, Mortadella, Manchego, Fontina, Blue Cheese, Berries & Rosemary Jam, Toast",
+      },
+      {
+        id: "shrimp-ceviche",
+        name: "Shrimp Ceviche",
+        price: "$16",
+        description: "Cooked shrimp with tomato and lemon base",
+      },
+      {
+        id: "marinated-olives",
+        name: "Marinated Olives",
+        price: "$6",
+        description: "Mix of citric marinated olives",
+        tags: ["V"],
+      },
+      {
+        id: "burrata",
+        name: "Burrata",
+        price: "$19",
+        description: "Burrata, arugula, blistered cherry tomato, pesto (no pine nuts), balsamic glaze",
+        tags: ["V"],
+      },
+      {
+        id: "caesar-salad",
+        name: "Caesar Salad",
+        description: "Add chicken $4 / shrimp $6",
+      },
+      {
+        id: "house-salad",
+        name: "House Salad",
+        price: "$13",
+        description: "Lettuce, red onions, tomato. Add chicken $6 / shrimp $7",
+        tags: ["V"],
+      },
+      {
+        id: "steak-salad",
+        name: "Steak Salad",
+        price: "$19",
+        description: "4 oz skirt steak, lettuce, red onions, tomato & almonds",
+      },
+    ],
+    columns: 2,
+  },
+  {
+    id: "to-start-hot",
+    title: "To Start — Hot",
+    items: [
+      { id: "empanada", name: "Empanada (1 pc)", price: "$4", description: "Beef or Spinach & Cream", tags: ["N","V"] },
+      {
+        id: "provoleta",
+        name: "Provoleta",
+        price: "$13",
+        description: "Crispy provolone, caramelized onions, roasted peppers. Add Chorizo $4",
+        tags: ["V"],
+      },
+      {
+        id: "butternut-soup",
+        name: "Butternut Squash Soup",
+        price: "$4",
+        description: "Creamy calabaza soup with basil oil & croutons",
+        tags: ["V"],
+      },
+      {
+        id: "chicken-wings",
+        name: "Chicken Wings (4 pc)",
+        price: "$13",
+        description: "Chimi-marinated, fried. Choice of spicy or non-spicy",
+      },
+      { id: "grilled-chorizo", name: "Grilled Chorizo", price: "$9", description: "Made in-house" },
+      { id: "morcilla", name: "Morcilla", price: "$9", description: "Spiced blood sausage" },
+      { id: "molleja", name: "Molleja", price: "$11", description: "Grilled veal sweetbreads" },
+      {
+        id: "choripizza",
+        name: "Choripizza",
+        price: "$15",
+        description: "Chorizo over toasted bread with caramelized onions, mozzarella, provolone",
+      },
+    ],
+    columns: 2,
+  },
+  {
+    id: "sandwiches",
+    title: "Sandwiches",
+    items: [
+      {
+        id: "chivito-uru",
+        name: "Chivito Uruguayo*",
+        price: "$20",
+        description: "Sirloin slices, fried egg, ham, provolone, bacon, lettuce, onions, peppers. Served with fries",
+      },
+      {
+        id: "choripan",
+        name: "Choripán*",
+        price: "$16",
+        description: "Chorizo sandwich with chimichurri, lettuce, tomato, fries. Add Provolone $2",
+      },
+      {
+        id: "milanesa-sand",
+        name: "Milanesa",
+        price: "$24",
+        description: "Breaded beef, lettuce, tomato, ham, cheese, chimimayo",
+      },
+      {
+        id: "burger-rio",
+        name: "Burger Rioplatense",
+        price: "$16",
+        description: "Brisket & short rib burger with tomato, lettuce, chimimayo, fries",
+      },
+      {
+        id: "estancia-burger",
+        name: "Estancia Burger*",
+        price: "$19",
+        description: "House burger with ham, cheese, mushrooms, tomato, lettuce, chimimayo, fries",
+      },
+    ],
+  },
+  {
+    id: "mains",
+    title: "Mains",
+    items: [
+      {
+        id: "chivito-plato",
+        name: "Chivito al Plato",
+        price: "$20",
+        description: "Sirloin slices, fried egg, ham, provolone, bacon, lettuce, onions, peppers. Served with fries",
+      },
+      {
+        id: "four-cheese-ravioli",
+        name: "Four Cheese Ravioli (V)",
+        price: "$24",
+        description: "Choice of mushroom cream, tomato sauce, or bolognese",
+        tags: ["V"],
+      },
+      {
+        id: "atlantic-salmon",
+        name: "Atlantic Salmon*",
+        price: "$28",
+        description: "Pan-seared salmon, mashed potatoes, asparagus, mustard cream",
+      },
+    ],
+  },
+  {
+    id: "milanesas",
+    title: "Milanesas",
+    subtitle: "Breaded beef / Deep fried / Delicious",
+    items: [
+      { id: "milanesa-regular", name: "Regular", price: "$24", description: "Served with fries" },
+      {
+        id: "milanesa-napolitana",
+        name: "Napolitana",
+        price: "$28",
+        description: "Mozzarella, provolone, ham, tomato sauce",
+      },
+      {
+        id: "milanesa-twin-cities",
+        name: "Twin Cities",
+        price: "$32",
+        description: "Burrata, prosciutto, tomato sauce, provolone, mozzarella",
+      },
+      { id: "milanesa-a-caballo", name: "Make it "a Caballo"", price: "+$5", description: "Add 2 fried eggs on top" },
+    ],
+  },
+  {
+    id: "from-the-grill",
+    title: "From the Grill*",
+    subtitle: "Served with 2 sides",
+    items: [
+      { id: "asado-de-tira", name: "Asado de Tira*", price: "$39", description: "12 oz bone-in CAB short ribs" },
+      { id: "new-york", name: "New York*", price: "$41", description: "10 oz CAB striploin" },
+      { id: "ribeye", name: "Ribeye*", price: "$45", description: "10 oz CAB 'Ojo de Bife'" },
+      { id: "tomahawk", name: "Tomahawk*", price: "$135", description: "Full bone-in 32 oz ribeye" },
+      { id: "tenderloin", name: "Tenderloin*", price: "$49", description: "8 oz prime tenderloin" },
+      { id: "skirt-steak", name: "Skirt Steak*", price: "$42", description: "10 oz skirt steak" },
+      { id: "chicken-breast", name: "Chicken Breast*", price: "$25", description: "Marinated chicken breast" },
+      { id: "porterhouse", name: "Porterhouse*", price: "$57", description: "16 oz T-bone steak" },
+      { id: "a-la-riojana", name: "Make any steak "A LA RIOJANA"", price: "+$6", description: "Caramelized onions, fried egg, tomato sauce, green peas" },
+    ],
+    columns: 2,
+  },
+  {
+    id: "parrilladas",
+    title: "Parrilladas",
+    items: [
+      {
+        id: "parrillada-2",
+        name: "Parrillada for 2*",
+        price: "$127",
+        description: "Striploin, skirt steak, asado de tira, chicken breast, chorizo, morcilla, chimichurri, salsa criolla",
+      },
+      {
+        id: "parrillada-la-estancia",
+        name: "Parrillada La Estancia*",
+        price: "$169",
+        description: "Provoleta, ribeye, striploin, skirt steak, asado de tira, lomo, chicken breast, chorizo, morcilla, chimichurri, salsa criolla",
+      },
+    ],
+  },
+  {
+    id: "asado-feast",
+    title: "ASADO FEAST*",
+    subtitle: "Only available for entire group / No individual order",
+    items: [
+      {
+        id: "asado-feast-item",
+        name: "All You Can Eat",
+        price: "$55",
+        description: "Asado de tira, chorizo, chicken breast, mashed potatoes, house salad, fries",
+      },
+    ],
+  },
+  {
+    id: "sides",
+    title: "Sides",
+    items: [
+      { id: "fingerling", name: "Fingerling Potatoes", price: "$7" },
+      { id: "steak-fries", name: "Steak Fries", price: "$7" },
+      { id: "sauteed-veg", name: "Sautéed Vegetables", price: "$7" },
+      { id: "rustic-mash", name: "Rustic Mashed Potatoes", price: "$7" },
+      { id: "sauteed-mush", name: "Sautéed Garlic Mushrooms", price: "$7" },
+      { id: "house-salad-side", name: "House Salad", price: "$7", description: "Lettuce, red onions, tomato" },
+    ],
+    columns: 3,
+  },
+  {
+    id: "kids",
+    title: "Kids Menu",
+    items: [
+      { id: "chickenitos", name: "Chickenitos", price: "$8", description: "4 pc chicken tenders, fries" },
+      { id: "mac-cheese", name: "Mac n' Cheese", price: "$7", description: "Macaroni pasta with cheese and cream" },
+    ],
+  },
+  {
+    id: "desserts",
+    title: "Desserts",
+    items: [
+      { id: "poste-chaja", name: "Postre Chajà", price: "$12", description: "Peaches, meringue, whipped cream, vanilla sponge cake" },
+      { id: "panqueque", name: "Panqueque", price: "$9", description: "Sweet crêpe stuffed with dulce de leche" },
+      { id: "flan", name: "Flan", price: "$9", description: "Baked vanilla custard" },
+      {
+        id: "ice-cream",
+        name: "Ice Cream Scoop",
+        price: "$6",
+        description: "Vanilla • Chocolate • Dulce de Leche. Add Dulce de Leche or Berries +$3",
+      },
+    ],
+  },
+  {
+    id: "drinks",
+    title: "Drinks",
+    items: [
+      { id: "house-cocktails", name: "House Cocktails", price: "$7" },
+      { id: "el-asador", name: "El Asador", price: "$14", description: "Bourbon, grilled orange, lemon, rosemary" },
+      { id: "the-su", name: "The Su'", price: "$13", description: "Bourbon, mint, peach, cinnamon, lime" },
+      { id: "rum-of", name: "Rum Old Fashioned", price: "$14", description: "Rum, vanilla, star anise, bitters" },
+      { id: "mate-venga", name: "Mate y Venga", price: "$14", description: "Vodka, yerba mate, lemon, lime" },
+      { id: "foam-later", name: "Foam me Later", price: "$15", description: "Gin, guava, lime, vanilla & pink peppercorn foam" },
+      { id: "viridian", name: "Viridian", price: "$13", description: "Vodka, elderflower, cucumber, rosemary syrup, lime" },
+      { id: "jardin-jalisco", name: "Jardin Jalisco", price: "$16", description: "Tequila, prosecco, elderflower, Grand Marnier, guava, lemon" },
+      { id: "scarlet-sin", name: "Scarlet Sin", price: "$15", description: "Tequila, Grand Marnier, hibiscus, strawberry, lime" },
+      { id: "spicita", name: "Spicita Mezcalita", price: "$14", description: "Mezcal, mango, pineapple, jalapeño" },
+      { id: "beer-draft", name: "Draft Beers", price: "$7", description: "Castle Danger Cream Ale • Modelo Especial • Modelo Negra • Coors Light • Pacifico" },
+      { id: "beer-bottled", name: "Bottled", description: "Corona Extra • Heineken • Stella Artois • Angry Orchard • Voodoo Ranger (IPA)" },
+    ],
+    columns: 2,
+  },
+]
+
+function Badge({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-secondary/20 to-accent/20 text-accent border border-accent/30">
+      {children}
+    </span>
+  )
+}
+
+function ItemCard({ item }: { item: MenuItem }) {
+  return (
+    <article className="menu-card group">
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-3 mb-2">
+            <h3 className="font-playfair text-lg lg:text-xl font-semibold text-foreground group-hover:text-accent transition-colors duration-300">
+              {item.name}
+            </h3>
+            {item.tags && item.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {item.tags.map((tag) => (
+                  <Badge key={tag}>{tag}</Badge>
+                ))}
+              </div>
+            )}
+          </div>
+          {item.description && (
+            <p className="font-inter text-sm text-muted-foreground leading-relaxed">
+              {item.description}
+            </p>
+          )}
+        </div>
+        {item.price && (
+          <div className="flex-shrink-0">
+            <span className="font-playfair text-lg lg:text-xl font-semibold text-accent">
+              {item.price}
+            </span>
+          </div>
+        )}
+      </div>
+    </article>
+  )
+}
+
+export default function MenuPage() {
+  return (
+    <>
+      <Navigation />
+      <main className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="relative pt-20 pb-16 lg:pb-24 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+            style={{
+              backgroundImage: `url('/premium-ribeye-steak-with-chimichurri-sauce-on-ele.jpg')`,
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background" />
+          
+          <div className="relative z-10 container mx-auto px-6 lg:px-8">
+            <div className="text-center max-w-4xl mx-auto">
+              {/* Header */}
+              <div className="mb-12">
+                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
+                  <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+                    Authentic Argentine Cuisine
+                  </span>
+                </div>
+                
+                <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground mb-6">
+                  La Estancia <span className="text-gold-gradient">Menu</span>
+                </h1>
+                
+                <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                  Experience the authentic flavors of Argentina and Uruguay. Each dish is crafted with passion, 
+                  using traditional recipes and the finest ingredients.
+                </p>
+                
+                <div className="flex items-center justify-center mt-8 space-x-8 text-sm text-muted-foreground">
+                  <div className="flex items-center space-x-2">
+                    <Badge>V</Badge>
+                    <span>Vegetarian</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Badge>N</Badge>
+                    <span>Contains Nuts</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Delivery Options */}
+              <div className="flex items-center justify-center gap-4 mb-12">
+                <a
+                  href="https://www.doordash.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="delivery-btn group"
+                  aria-label="Order on DoorDash"
+                >
+                  <img src="https://toppng.com/uploads/preview/doordash-logo-11609359542nd1g660y5t.png" alt="DoorDash" className="group-hover:scale-110 transition-transform duration-300" />
+                </a>
+                <a
+                  href="https://www.grubhub.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="delivery-btn group"
+                  aria-label="Order on Grubhub"
+                >
+                  <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="group-hover:scale-110 transition-transform duration-300" />
+                </a>
+                <a
+                  href="https://www.ubereats.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="delivery-btn group"
+                  aria-label="Order on Uber Eats"
+                >
+                  <img src="https://toppng.com/uploads/preview/uber-eats-logo-11609380482tcjqocukop.png" alt="Uber Eats" className="group-hover:scale-110 transition-transform duration-300" />
+                </a>
+              </div>
+
+              {/* Private Dining CTA */}
+              <a
+                href="/reservations"
+                className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+              >
+                <span>Book Private Dining</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Menu Sections */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto space-y-20">
+              {sections.map((section, sectionIndex) => (
+                <div key={section.id} id={section.id} className="animate-fade-in-up">
+                  {/* Section Header */}
+                  <div className="text-center mb-12">
+                    <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                      {section.title}
+                    </h2>
+                    {section.subtitle && (
+                      <p className="font-inter text-lg text-muted-foreground italic">
+                        {section.subtitle}
+                      </p>
+                    )}
+                    <div className="section-divider"></div>
+                  </div>
+
+                  {/* Menu Items Grid */}
+                  <div
+                    className={`grid gap-6 ${
+                      section.columns === 3
+                        ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                        : section.columns === 2
+                        ? "grid-cols-1 lg:grid-cols-2"
+                        : "grid-cols-1"
+                    }`}
+                  >
+                    {section.items.map((item, itemIndex) => (
+                      <div
+                        key={item.id}
+                        className={`animate-fade-in-up stagger-${(itemIndex % 4) + 1}`}
+                      >
+                        <ItemCard item={item} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              {/* Disclaimer */}
+              <div className="bg-gradient-to-r from-muted/30 to-muted/20 rounded-2xl p-8 border border-border/50 text-center">
+                <p className="font-inter text-sm text-muted-foreground leading-relaxed">
+                  <strong>*</strong> Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of
+                  foodborne illness, especially if you have certain medical conditions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Delivery Promotion */}
+        <section className="py-16 lg:py-24 bg-gradient-to-br from-muted/20 to-background">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50">
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
+                  <span className="text-3xl">🚚</span>
+                </div>
+                
+                <h3 className="font-playfair text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                  Delivery Available
+                </h3>
+                
+                <p className="font-inter text-lg text-muted-foreground mb-8 leading-relaxed">
+                  Bring the authentic flavors of La Estancia to your home. Perfect for special occasions, 
+                  family dinners, or when you're craving exceptional Argentine cuisine.
+                </p>
+                
+                <div className="flex items-center justify-center gap-4">
+                  <a
+                    href="https://www.doordash.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="delivery-btn group"
+                    aria-label="Order on DoorDash"
+                  >
+                    <img src="https://toppng.com/uploads/preview/doordash-logo-11609359542nd1g660y5t.png" alt="DoorDash" className="group-hover:scale-110 transition-transform duration-300" />
+                  </a>
+                  <a
+                    href="https://www.grubhub.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="delivery-btn group"
+                    aria-label="Order on Grubhub"
+                  >
+                    <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="group-hover:scale-110 transition-transform duration-300" />
+                  </a>
+                  <a
+                    href="https://www.ubereats.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="delivery-btn group"
+                    aria-label="Order on Uber Eats"
+                  >
+                    <img src="https://toppng.com/uploads/preview/uber-eats-logo-11609380482tcjqocukop.png" alt="Uber Eats" className="group-hover:scale-110 transition-transform duration-300" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  )
+}

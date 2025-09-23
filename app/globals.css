@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    /* Sophisticated Argentine Steakhouse Color Palette */
+    --background: 45 20% 97%; /* Warm cream background */
+    --foreground: 25 25% 10%; /* Rich dark brown */
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 25 25% 10%; /* Rich dark brown */
+    --popover: 0 0% 100%; /* White popover */
+    --popover-foreground: 25 25% 10%; /* Rich dark brown */
+    --primary: 25 65% 32%; /* Saddle brown - rich leather */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 45 75% 52%; /* Elegant gold */
+    --secondary-foreground: 25 25% 10%; /* Dark text on gold */
+    --muted: 36 25% 95%; /* Light warm gray */
+    --muted-foreground: 25 15% 45%; /* Warm gray text */
+    --accent: 25 50% 52%; /* Peru - warm accent */
+    --accent-foreground: 0 0% 100%; /* White on accent */
+    --destructive: 0 84% 60%; /* Red for errors */
+    --destructive-foreground: 0 0% 100%; /* White on red */
+    --border: 36 25% 88%; /* Warm border */
+    --input: 0 0% 100%; /* White input */
+    --ring: 25 65% 32%; /* Brown focus ring */
+    --chart-1: 25 65% 32%; /* Saddle brown */
+    --chart-2: 45 75% 52%; /* Gold */
+    --chart-3: 25 25% 10%; /* Dark brown */
+    --chart-4: 36 25% 95%; /* Light warm */
+    --chart-5: 25 50% 52%; /* Peru */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(45 75% 52% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(25 65% 32% / 0.05) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  /* Typography Classes */
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Custom Argentine-inspired elements */
+  .leather-texture {
+    @apply relative;
+    background: linear-gradient(135deg, hsl(25 65% 32%) 0%, hsl(25 60% 45%) 50%, hsl(25 65% 32%) 100%);
+  }
+  
+  .leather-texture::before {
+    content: '';
+    @apply absolute inset-0;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+      radial-gradient(circle at 80% 80%, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .gold-accent {
+    background: linear-gradient(135deg, hsl(45 75% 52%) 0%, hsl(51 100% 50%) 50%, hsl(45 75% 52%) 100%);
+  }
+  
+  .wine-gradient {
+    background: linear-gradient(135deg, hsl(352 42% 32%) 0%, hsl(352 42% 40%) 50%, hsl(352 42% 32%) 100%);
+  }
+  
+  /* Enhanced shadows for depth */
+  .shadow-warm {
+    box-shadow: 0 10px 25px -3px hsl(25 65% 32% / 0.1), 0 4px 6px -2px hsl(25 65% 32% / 0.05);
+  }
+  
+  .shadow-gold {
+    box-shadow: 0 10px 25px -3px hsl(45 75% 52% / 0.2), 0 4px 6px -2px hsl(45 75% 52% / 0.1);
+  }
+  
+  /* Text effects */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, hsl(45 75% 52%) 0%, hsl(51 100% 50%) 50%, hsl(45 75% 52%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .text-shadow-warm {
+    text-shadow: 2px 2px 4px hsl(25 25% 10% / 0.3);
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 20px 40px -4px hsl(25 65% 32% / 0.15);
+  }
+  
+  /* Navigation enhancements */
+  .nav-glass {
+    backdrop-filter: blur(12px);
+    background: hsl(45 20% 97% / 0.9);
+    border-bottom: 1px solid hsl(45 75% 52% / 0.2);
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    @apply leather-texture text-white font-semibold px-8 py-4 rounded-xl shadow-warm hover:shadow-gold transition-all duration-300 hover:-translate-y-1 relative overflow-hidden;
+  }
+  
+  .btn-secondary {
+    @apply gold-accent text-foreground font-semibold px-8 py-4 rounded-xl shadow-gold hover:shadow-warm transition-all duration-300 hover:-translate-y-1 relative overflow-hidden;
+  }
+  
+  /* Delivery buttons */
+  .delivery-btn {
+    @apply bg-white p-3 rounded-xl hover:scale-105 transition-all duration-300 h-14 flex items-center justify-center shadow-warm hover:shadow-gold border border-border;
+  }
+  
+  .delivery-btn img {
+    @apply h-10 w-auto;
+  }
+  
+  /* Menu card styling */
+  .menu-card {
+    @apply bg-white rounded-2xl p-6 shadow-warm hover:shadow-gold transition-all duration-300 border border-border hover:border-accent/30 hover:-translate-y-1;
+  }
+  
+  /* Section dividers */
+  .section-divider {
+    background: linear-gradient(90deg, transparent 0%, hsl(45 75% 52%) 20%, hsl(25 65% 32%) 50%, hsl(45 75% 52%) 80%, transparent 100%);
+    height: 2px;
+    margin: 4rem 0;
+  }
+  
+  /* Animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
