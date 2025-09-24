@@ -427,59 +427,6 @@ export default function MenuPage() {
           </div>
         </section>
 
-        {/* Video Showcase Section */}
-        <section className="py-16 lg:py-24 bg-gradient-to-br from-muted/10 to-background">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-                  <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
-                    Behind the Scenes
-                  </span>
-                </div>
-                
-                <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                  Experience <span className="text-gold-gradient">La Estancia</span>
-                </h2>
-                
-                <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                  Take a glimpse into our restaurant and see the passion that goes into every dish we serve.
-                </p>
-                
-                <div className="section-divider"></div>
-              </div>
-
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-black/5 backdrop-blur-sm border border-border/20">
-                <video
-                  className="w-full h-auto max-h-[600px] object-cover"
-                  controls
-                  preload="metadata"
-                  poster="/images/la-estancia-logo-transparent.png"
-                  aria-label="La Estancia restaurant showcase video"
-                >
-                  <source
-                    src="https://res.cloudinary.com/dg1z5a9bi/video/upload/v1758395517/IMG_1875_g9vxuc.mov"
-                    type="video/mp4"
-                  />
-                  <p className="text-muted-foreground p-8 text-center">
-                    Your browser does not support the video tag. 
-                    <a 
-                      href="https://res.cloudinary.com/dg1z5a9bi/video/upload/v1758395517/IMG_1875_g9vxuc.mov"
-                      className="text-accent underline ml-1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Click here to view the video directly.
-                    </a>
-                  </p>
-                </video>
-                
-                {/* Video overlay for better visual integration */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Menu Sections */}
         <section className="py-16 lg:py-24">

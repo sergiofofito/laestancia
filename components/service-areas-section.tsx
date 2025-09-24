@@ -33,8 +33,17 @@ export function ServiceAreasSection() {
   ]
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-muted/10 to-background">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-muted/10 to-background relative">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-15"
+        style={{
+          backgroundImage: `url('/images/background.png')`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '80px 80px'
+        }}
+      />
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">

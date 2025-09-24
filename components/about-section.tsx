@@ -3,10 +3,10 @@ export function AboutSection() {
     <section id="about" className="py-20 lg:py-32 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div 
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-15"
         style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.3) 2px, transparent 2px),
-                           radial-gradient(circle at 75% 75%, rgba(139, 69, 19, 0.3) 2px, transparent 2px)`,
+          backgroundImage: `url('/images/background.png')`,
+          backgroundRepeat: 'repeat',
           backgroundSize: '80px 80px'
         }}
       />

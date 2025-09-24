@@ -27,7 +27,7 @@
   
   :root {
     /* Sophisticated Argentine Steakhouse Color Palette */
-    --background: 45 20% 97%; /* Warm cream background */
+    --background: #f8f8f8; /*45 20% 97%; /* Warm cream background */
     --foreground: 25 25% 10%; /* Rich dark brown */
     --card: 0 0% 100%; /* Pure white cards */
     --card-foreground: 25 25% 10%; /* Rich dark brown */

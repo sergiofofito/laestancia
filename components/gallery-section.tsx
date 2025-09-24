@@ -52,8 +52,17 @@ export function GallerySection() {
   ]
 
   return (
-    <section id="gallery" className="py-20 lg:py-32 bg-gradient-to-br from-background to-muted/20">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section id="gallery" className="py-20 lg:py-32 bg-gradient-to-br from-background to-muted/20 relative">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-15"
+        style={{
+          backgroundImage: `url('/images/background.png')`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '80px 80px'
+        }}
+      />
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
