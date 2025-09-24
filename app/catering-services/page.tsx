@@ -268,7 +268,6 @@ export default function CateringServicesPage() {
                   <div className="font-inter text-muted-foreground space-y-2">
                     <p>📍 4751 Nicollet Ave, Tangletown, MN 55419</p>
                     <p>📞 (612) 200-8377</p>
-                    <p>🕒 Open 7 days a week</p>
                     <p>🚗 Parking available</p>
                   </div>
                 </div>
