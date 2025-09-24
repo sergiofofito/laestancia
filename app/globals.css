@@ -178,6 +178,24 @@
     margin: 4rem 0;
   }
   
+  /* Background for white sections */
+  .bg-textured-white {
+    background-color: #fafafa;
+    background-image: url('/images/background.png');
+    background-repeat: repeat;
+    background-size: 150px 150px;
+    background-position: 0 0;
+    background-blend-mode: normal;
+    opacity: 1;
+  }
+  
+  /* Alternative more visible version */
+  .bg-textured-white-alt {
+    background: white url('/images/background.png') repeat;
+    background-size: 100px 100px;
+    background-blend-mode: soft-light;
+  }
+  
   /* Animations */
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;

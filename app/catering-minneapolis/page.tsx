@@ -47,7 +47,7 @@ export default function CateringMinneapolisPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+16123338888"
+                  href="tel:+16122008377"
                   className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
                 >
                   <span>Get Catering Quote</span>
@@ -80,7 +80,7 @@ export default function CateringMinneapolisPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
+                <div className="bg-textured-white rounded-2xl p-8 shadow-warm border border-border/50">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
                     <span className="text-2xl">🏢</span>
                   </div>
@@ -93,7 +93,7 @@ export default function CateringMinneapolisPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
+                <div className="bg-textured-white rounded-2xl p-8 shadow-warm border border-border/50">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
                     <span className="text-2xl">💒</span>
                   </div>
@@ -106,7 +106,7 @@ export default function CateringMinneapolisPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
+                <div className="bg-textured-white rounded-2xl p-8 shadow-warm border border-border/50">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
                     <span className="text-2xl">🎉</span>
                   </div>
@@ -219,7 +219,7 @@ export default function CateringMinneapolisPage() {
         {/* Contact & Booking */}
         <section className="py-16 lg:py-24 bg-gradient-to-br from-muted/20 to-background">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50">
+            <div className="max-w-4xl mx-auto bg-textured-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50">
               <div className="text-center mb-8">
                 <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-6">
                   Book Your Minneapolis Catering Event
@@ -236,7 +236,7 @@ export default function CateringMinneapolisPage() {
                     Catering Information
                   </h3>
                   <div className="font-inter text-muted-foreground space-y-2">
-                    <p>📞 Catering Hotline: (612) 333-8888</p>
+                    <p>📞 Catering Hotline: (612) 200-8377</p>
                     <p>📧 catering@laestanciasteakhouse.com</p>
                     <p>⏰ 48-hour advance notice required</p>
                     <p>👥 Minimum 15 guests</p>
@@ -260,7 +260,7 @@ export default function CateringMinneapolisPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+16123338888"
+                  href="tel:+16122008377"
                   className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
                 >
                   <span>Call for Quote</span>

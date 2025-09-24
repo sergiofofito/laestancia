@@ -56,10 +56,10 @@ export default function PrivateDiningMinneapolisPage() {
                   <span>→</span>
                 </a>
                 <a
-                  href="tel:+16123338888"
+                  href="tel:+16122008377"
                   className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
                 >
-                  <span>Call (612) 333-8888</span>
+                  <span>Call (612) 200-8377</span>
                   <span>📞</span>
                 </a>
               </div>
@@ -82,7 +82,7 @@ export default function PrivateDiningMinneapolisPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
+                <div className="bg-textured-white rounded-2xl p-8 shadow-warm border border-border/50">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
                     <span className="text-2xl">🥩</span>
                   </div>
@@ -95,7 +95,7 @@ export default function PrivateDiningMinneapolisPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
+                <div className="bg-textured-white rounded-2xl p-8 shadow-warm border border-border/50">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
                     <span className="text-2xl">🍷</span>
                   </div>
@@ -108,7 +108,7 @@ export default function PrivateDiningMinneapolisPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
+                <div className="bg-textured-white rounded-2xl p-8 shadow-warm border border-border/50">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
                     <span className="text-2xl">👥</span>
                   </div>
@@ -133,7 +133,7 @@ export default function PrivateDiningMinneapolisPage() {
                 Book Your Minneapolis Private Dining Experience
               </h2>
               
-              <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50 mb-8">
+              <div className="bg-textured-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50 mb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="font-playfair text-xl font-bold text-foreground mb-4">
@@ -154,7 +154,7 @@ export default function PrivateDiningMinneapolisPage() {
                     </h3>
                     <div className="font-inter text-muted-foreground space-y-2 text-left">
                       <p>📍 123 Main Street, Minneapolis, MN 55401</p>
-                      <p>📞 (612) 333-8888</p>
+                      <p>📞 (612) 200-8377</p>
                       <p>🕒 Available 7 days a week</p>
                       <p>🚗 Valet parking available</p>
                       <p>🚇 Near downtown Minneapolis transit</p>
