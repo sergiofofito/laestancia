@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { GallerySection } from "@/components/gallery-section"
+import { ServiceAreasSection } from "@/components/service-areas-section"
 import { AboutSection } from "@/components/about-section"
 import { ReviewsSection } from "@/components/reviews-section"
 import { ReservationSection } from "@/components/reservation-section"
@@ -14,6 +15,7 @@ export default function HomePage() {
         <Navigation />
         <HeroSection />
         <GallerySection />
+        <ServiceAreasSection />
         <AboutSection />
         <ReviewsSection />
         <ReservationSection />

@@ -24,6 +24,7 @@ export function Navigation() {
     { label: "Menu", href: "/food" },
     { label: "Gallery", href: "#gallery" },
     { label: "About", href: "/meetowners" },
+    { label: "Catering", href: "/catering-services" },
     { label: "Contact", href: "#contact" },
   ]
 

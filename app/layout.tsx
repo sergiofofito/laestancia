@@ -4,27 +4,51 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { RestaurantSchema, LocalBusinessSchema } from "@/components/schema-markup"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "La Estancia Steakhouse - Argentinean/Uruguayan Cuisine in Minneapolis",
+  title: "La Estancia Steakhouse - Best Argentinian Restaurant Minneapolis | Twin Cities",
   description:
-    "Best Steakhouse in Minneapolis - Experience authentic Argentinean/Uruguayan cuisine at La Estancia Steakhouse. Premium steaks, traditional dishes, and exceptional dining in Minneapolis.",
+    "Best Steakhouse in Minneapolis - Experience authentic Argentinian/Uruguayan cuisine at La Estancia. Serving Minneapolis, St Paul, Edina, and Twin Cities with premium steaks, private dining, and catering.",
   generator: "v0.app",
   icons: {
     icon: "/images/la-estancia-logo-transparent.png",
+    shortcut: "/images/la-estancia-logo-transparent.png",
+    apple: "/images/la-estancia-logo-transparent.png",
   },
   openGraph: {
-    images: "/images/la-estancia-logo-transparent.png",
+    title: "La Estancia Steakhouse - Best Argentinian Restaurant Minneapolis",
+    description: "Authentic Argentinian steakhouse serving Minneapolis, St Paul, Edina, and Twin Cities metro area.",
+    images: ["/images/la-estancia-logo-transparent.png"],
+    url: "https://www.laestanciasteakhouse.com",
+    siteName: "La Estancia Steakhouse",
+    locale: "en_US",
+    type: "website"
   },
   twitter: {
-    images: "/images/la-estancia-logo-transparent.png",
+    card: "summary_large_image",
+    title: "La Estancia Steakhouse - Best Argentinian Restaurant Minneapolis",
+    description: "Authentic Argentinian steakhouse serving Twin Cities metro area",
+    images: ["/images/la-estancia-logo-transparent.png"],
   },
-  keywords: ["La Estancia Steakhouse", "Best Steakhouse in Minneapolis", "Authentic Argentinean/Uruguayan Cuisine", "Minneapolis Steakhouse", "Minneapolis Steakhouse Deals", "Minneapolis Steakhouse Deals", "Minneapolis Steakhouse Deals"],
+  keywords: [
+    "La Estancia Steakhouse", "Best Steakhouse Minneapolis", "Argentinian restaurant Minneapolis", 
+    "steakhouse St Paul", "Argentinian restaurant Edina", "Twin Cities steakhouse", 
+    "private dining Minneapolis", "catering Minneapolis", "Minneapolis fine dining",
+    "Argentinian cuisine", "Uruguayan restaurant", "parrillada Minneapolis", 
+    "empanadas Minneapolis", "chimichurri", "Malbec wine", "South American restaurant"
+  ],
   robots: "index, follow",
   alternates: {
     canonical: "https://www.laestanciasteakhouse.com",
   },
+  other: {
+    "geo.region": "US-MN",
+    "geo.placename": "Minneapolis",
+    "geo.position": "44.9216;-93.2781",
+    "ICBM": "44.9216, -93.2781"
+  }
 }
 
 export default function RootLayout({
@@ -34,6 +58,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <RestaurantSchema />
+        <LocalBusinessSchema />
+      </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
