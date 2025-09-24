@@ -59,7 +59,7 @@ export function ServiceAreasSection() {
             {serviceAreas.map((area, index) => (
               <div
                 key={index}
-                className={`group ${index === 0 ? 'bg-textured-white-alt' : 'bg-textured-white'} rounded-2xl overflow-hidden shadow-warm border border-border/50 hover:shadow-gold transition-all duration-500 hover:-translate-y-2`}
+                className="group bg-white rounded-2xl overflow-hidden shadow-warm border border-border/50 hover:shadow-gold transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Image */}
                 <div className="aspect-video overflow-hidden">
@@ -97,7 +97,7 @@ export function ServiceAreasSection() {
           </div>
 
           {/* Restaurant Location Highlight */}
-          <div className="bg-textured-white rounded-2xl p-8 shadow-warm border border-border/50 mb-8">
+          <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50 mb-8">
             <div className="text-center mb-6">
               <h3 className="font-playfair text-2xl font-bold text-foreground mb-4">
                 Our Restaurant Location
@@ -112,7 +112,7 @@ export function ServiceAreasSection() {
           </div>
 
           {/* Additional Catering Areas */}
-          <div className="bg-textured-white rounded-2xl p-8 shadow-warm border border-border/50">
+          <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
             <div className="text-center mb-6">
               <h3 className="font-playfair text-2xl font-bold text-foreground mb-4">
                 We Also Provide Catering To These Twin Cities Communities

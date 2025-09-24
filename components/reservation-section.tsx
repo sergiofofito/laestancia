@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 
 export function ReservationSection() {
   return (
-    <section id="reservation" className="relative py-20 lg:py-32 overflow-hidden">
+    <section id="reservation" className="relative py-20 lg:py-32 overflow-hidden no-global-bg">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

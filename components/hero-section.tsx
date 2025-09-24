@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20 no-global-bg">
       {/* Background Image with Parallax Effect */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"

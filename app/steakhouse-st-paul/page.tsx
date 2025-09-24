@@ -18,7 +18,7 @@ export default function SteakhouseStPaulPage() {
       <Navigation />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative pt-20 pb-16 lg:pb-24 overflow-hidden">
+        <section className="relative pt-20 pb-16 lg:pb-24 overflow-hidden no-global-bg">
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
             style={{
@@ -156,7 +156,7 @@ export default function SteakhouseStPaulPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-textured-white rounded-2xl p-6 shadow-warm border border-border/50">
+                <div className="bg-white rounded-2xl p-6 shadow-warm border border-border/50">
                   <h3 className="font-playfair text-xl font-bold text-foreground mb-3">
                     Parrillada for Two
                   </h3>
@@ -167,7 +167,7 @@ export default function SteakhouseStPaulPage() {
                   <span className="font-playfair text-lg font-semibold text-accent">$127</span>
                 </div>
 
-                <div className="bg-textured-white rounded-2xl p-6 shadow-warm border border-border/50">
+                <div className="bg-white rounded-2xl p-6 shadow-warm border border-border/50">
                   <h3 className="font-playfair text-xl font-bold text-foreground mb-3">
                     Tomahawk Ribeye
                   </h3>
@@ -178,7 +178,7 @@ export default function SteakhouseStPaulPage() {
                   <span className="font-playfair text-lg font-semibold text-accent">$135</span>
                 </div>
 
-                <div className="bg-textured-white rounded-2xl p-6 shadow-warm border border-border/50">
+                <div className="bg-white rounded-2xl p-6 shadow-warm border border-border/50">
                   <h3 className="font-playfair text-xl font-bold text-foreground mb-3">
                     Milanesa Napolitana
                   </h3>
@@ -196,7 +196,7 @@ export default function SteakhouseStPaulPage() {
         {/* CTA Section */}
         <section className="py-16 lg:py-24 bg-gradient-to-br from-muted/20 to-background">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto bg-textured-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50 text-center">
+            <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50 text-center">
               <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-6">
                 Ready to Experience the Best Steakhouse St Paul Recommends?
               </h2>
