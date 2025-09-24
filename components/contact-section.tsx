@@ -29,7 +29,7 @@ export function ContactSection() {
             at our Minneapolis location.
           </p>
         </div>
-
+        {/* Contact Information */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div className="space-y-8 animate-fade-in-up">
