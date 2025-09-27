@@ -37,7 +37,7 @@ const sections: MenuSection[] = [
       {
         id: "marinated-olives",
         name: "Marinated Olives",
-        price: "$6",
+        price: "$11",
         description: "Mix of citric marinated olives",
         tags: ["V"],
       },
@@ -51,6 +51,7 @@ const sections: MenuSection[] = [
       {
         id: "caesar-salad",
         name: "Caesar Salad",
+        price: "$13",
         description: "Add chicken $4 / shrimp $6",
       },
       {
@@ -73,18 +74,18 @@ const sections: MenuSection[] = [
     id: "to-start-hot",
     title: "To Start — Hot",
     items: [
-      { id: "empanada", name: "Empanada (1 pc)", price: "$4", description: "Beef or Spinach & Cream", tags: ["N","V"] },
+      { id: "empanada", name: "Empanada (1 pc)", price: "$6", description: "Beef or Spinach & Cream", tags: ["N","V"] },
       {
         id: "provoleta",
         name: "Provoleta",
         price: "$13",
-        description: "Crispy provolone, caramelized onions, roasted peppers. Add Chorizo $4",
+        description: "Crispy provolone, caramelized onions, roasted peppers. Add Chorizo $5",
         tags: ["V"],
       },
       {
         id: "butternut-soup",
         name: "Butternut Squash Soup",
-        price: "$4",
+        price: "$14",
         description: "Creamy calabaza soup with basil oil & croutons",
         tags: ["V"],
       },
@@ -253,21 +254,21 @@ const sections: MenuSection[] = [
     id: "kids",
     title: "Kids Menu",
     items: [
-      { id: "chickenitos", name: "Chickenitos", price: "$8", description: "4 pc chicken tenders, fries" },
-      { id: "mac-cheese", name: "Mac n' Cheese", price: "$7", description: "Macaroni pasta with cheese and cream" },
+      { id: "chickenitos", name: "Chickenitos", price: "$12", description: "4 pc chicken tenders, fries" },
+      { id: "mac-cheese", name: "Mac n' Cheese", price: "$12", description: "Macaroni pasta with cheese and cream" },
     ],
   },
   {
     id: "desserts",
     title: "Desserts",
     items: [
-      { id: "poste-chaja", name: "Postre Chajà", price: "$12", description: "Peaches, meringue, whipped cream, vanilla sponge cake" },
-      { id: "panqueque", name: "Panqueque", price: "$9", description: "Sweet crêpe stuffed with dulce de leche" },
-      { id: "flan", name: "Flan", price: "$9", description: "Baked vanilla custard" },
+      { id: "poste-chaja", name: "Postre Chajà", price: "$15", description: "Peaches, meringue, whipped cream, vanilla sponge cake" },
+      { id: "panqueque", name: "Panqueque", price: "$12", description: "Sweet crêpe stuffed with dulce de leche" },
+      { id: "flan", name: "Flan", price: "$12", description: "Baked vanilla custard" },
       {
         id: "ice-cream",
         name: "Ice Cream Scoop",
-        price: "$6",
+        price: "$8",
         description: "Vanilla • Chocolate • Dulce de Leche. Add Dulce de Leche or Berries +$3",
       },
     ],
