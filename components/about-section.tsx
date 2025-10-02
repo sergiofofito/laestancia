@@ -27,7 +27,7 @@ export function AboutSection() {
             
             <div className="space-y-6 font-inter text-lg text-muted-foreground leading-relaxed">
               <p>
-                At La Estancia, we bring you the authentic flavors and warm hospitality of Argentina and Uruguay. 
+                At La Estancia (meaning "cattle ranch" in Spanish), we bring you the authentic flavors and warm hospitality of Argentina and Uruguay. 
                 Our passion for traditional South American cuisine drives every dish we create, every wine we pour, 
                 and every moment you spend with us.
               </p>
