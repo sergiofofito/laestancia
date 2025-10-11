@@ -169,7 +169,7 @@ export function ReservationSection() {
                 />
               </a>
               <a
-                href="https://www.grubhub.com/"
+                href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 backdrop-blur-sm p-4 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"

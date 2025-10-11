@@ -395,7 +395,7 @@ export default function MenuPage() {
                   <img src="https://toppng.com/uploads/preview/doordash-logo-11609359542nd1g660y5t.png" alt="DoorDash" className="group-hover:scale-110 transition-transform duration-300" />
                 </a>
                 <a
-                  href="https://www.grubhub.com/"
+                  href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="delivery-btn group"
@@ -510,7 +510,7 @@ export default function MenuPage() {
                     <img src="https://toppng.com/uploads/preview/doordash-logo-11609359542nd1g660y5t.png" alt="DoorDash" className="group-hover:scale-110 transition-transform duration-300" />
                   </a>
                   <a
-                    href="https://www.grubhub.com/"
+                    href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="delivery-btn group"
