@@ -27,7 +27,7 @@ export function HeroSection() {
         {/* Elegant Logo Display */}
         <div className="mb-12 animate-fade-in-up">
           <img 
-            src="/images/la-estancia-logo-transparent.png" 
+            src="/images/main_logo.png" 
             alt="La Estancia Logo" 
             className="h-32 lg:h-40 w-auto mx-auto mb-8 drop-shadow-2xl" 
           />

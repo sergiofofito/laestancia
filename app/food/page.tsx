@@ -384,33 +384,15 @@ export default function MenuPage() {
               </div>
 
               {/* Delivery Options */}
-              <div className="flex items-center justify-center gap-4 mb-12">
-                <a
-                  href="https://www.doordash.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="delivery-btn group"
-                  aria-label="Order on DoorDash"
-                >
-                  <img src="https://toppng.com/uploads/preview/doordash-logo-11609359542nd1g660y5t.png" alt="DoorDash" className="group-hover:scale-110 transition-transform duration-300" />
-                </a>
+              <div className="flex items-center justify-center mb-12">
                 <a
                   href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="delivery-btn group"
+                  className="bg-white p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-warm hover:shadow-gold border border-border w-full max-w-md group"
                   aria-label="Order on Grubhub"
                 >
-                  <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="group-hover:scale-110 transition-transform duration-300" />
-                </a>
-                <a
-                  href="https://www.ubereats.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="delivery-btn group"
-                  aria-label="Order on Uber Eats"
-                >
-                  <img src="https://toppng.com/uploads/preview/uber-eats-logo-11609380482tcjqocukop.png" alt="Uber Eats" className="group-hover:scale-110 transition-transform duration-300" />
+                  <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="w-full h-auto" />
                 </a>
               </div>
 
@@ -499,33 +481,15 @@ export default function MenuPage() {
                   family dinners, or when you're craving exceptional Argentine cuisine.
                 </p>
                 
-                <div className="flex items-center justify-center gap-4">
-                  <a
-                    href="https://www.doordash.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="delivery-btn group"
-                    aria-label="Order on DoorDash"
-                  >
-                    <img src="https://toppng.com/uploads/preview/doordash-logo-11609359542nd1g660y5t.png" alt="DoorDash" className="group-hover:scale-110 transition-transform duration-300" />
-                  </a>
+                <div className="flex items-center justify-center">
                   <a
                     href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="delivery-btn group"
+                    className="bg-white p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-warm hover:shadow-gold border border-border w-full max-w-md group"
                     aria-label="Order on Grubhub"
                   >
-                    <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="group-hover:scale-110 transition-transform duration-300" />
-                  </a>
-                  <a
-                    href="https://www.ubereats.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="delivery-btn group"
-                    aria-label="Order on Uber Eats"
-                  >
-                    <img src="https://toppng.com/uploads/preview/uber-eats-logo-11609380482tcjqocukop.png" alt="Uber Eats" className="group-hover:scale-110 transition-transform duration-300" />
+                    <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="w-full h-auto" />
                   </a>
                 </div>
               </div>

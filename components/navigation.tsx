@@ -39,7 +39,7 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/images/la-estancia-logo-transparent.png"
+              src="/images/main_logo.png"
               alt="La Estancia Steakhouse"
               className={`h-14 w-auto transition-all duration-300 ${
                 isScrolled ? "drop-shadow-md" : "drop-shadow-2xl"

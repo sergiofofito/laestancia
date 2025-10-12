@@ -179,7 +179,7 @@ export function ContactSection() {
             {/* Logo & Copyright */}
             <div className="flex items-center space-x-4 mb-6 lg:mb-0">
               <img
-                src="/images/la-estancia-logo-transparent.png"
+                src="/images/main_logo.png"
                 alt="La Estancia Logo"
                 className="h-12 w-auto"
               />

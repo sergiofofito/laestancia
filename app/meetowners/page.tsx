@@ -27,7 +27,7 @@ export default function MeetOwnersPage() {
               {/* Logo */}
               <div className="mb-8 animate-fade-in-up">
                 <img
-                  src="/images/la-estancia-logo-transparent.png"
+                  src="/images/main_logo.png"
                   alt="La Estancia Steakhouse Full Logo"
                   className="h-24 w-auto mx-auto drop-shadow-2xl"
                 />

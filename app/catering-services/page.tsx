@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Catering Services | La Estancia Steakhouse Twin Cities",
     description: "Premium Argentinian catering throughout the Twin Cities metro area from our Tangletown Minneapolis restaurant.",
-    images: ["/images/la-estancia-logo-transparent.png"],
+    images: ["/images/main_logo.png"],
   },
 }
 

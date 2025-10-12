@@ -154,44 +154,18 @@ export function ReservationSection() {
               Enjoy La Estancia at home with our delivery partners
             </p>
             
-            <div className="flex items-center justify-center gap-4">
-              <a
-                href="https://www.doordash.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 backdrop-blur-sm p-4 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"
-                aria-label="Order on DoorDash"
-              >
-                <img 
-                  src="https://toppng.com/uploads/preview/doordash-logo-11609359542nd1g660y5t.png" 
-                  alt="DoorDash" 
-                  className="h-10 w-auto" 
-                />
-              </a>
+            <div className="flex items-center justify-center">
               <a
                 href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 backdrop-blur-sm p-4 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"
+                className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 w-full max-w-md"
                 aria-label="Order on Grubhub"
               >
                 <img 
                   src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" 
                   alt="Grubhub" 
-                  className="h-10 w-auto" 
-                />
-              </a>
-              <a
-                href="https://www.ubereats.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 backdrop-blur-sm p-4 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20"
-                aria-label="Order on Uber Eats"
-              >
-                <img 
-                  src="https://toppng.com/uploads/preview/uber-eats-logo-11609380482tcjqocukop.png" 
-                  alt="Uber Eats" 
-                  className="h-10 w-auto" 
+                  className="w-full h-auto" 
                 />
               </a>
             </div>

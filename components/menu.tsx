@@ -361,37 +361,17 @@ export default function MenuPage() {
               </p>
             </div>
 
-            {/* Delivery buttons with shared class from globals.css */}
-            <div className="flex items-center gap-3">
-              <a
-                href="https://www.doordash.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="delivery-btn"
-                aria-label="Order on DoorDash"
-                title="DoorDash"
-              >
-                <img src="https://toppng.com/uploads/preview/doordash-logo-11609359542nd1g660y5t.png" alt="DoorDash" />
-              </a>
+            {/* Delivery button */}
+            <div className="flex items-center justify-center">
               <a
                 href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="delivery-btn"
+                className="bg-white p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-warm hover:shadow-gold border border-border w-full max-w-sm"
                 aria-label="Order on Grubhub"
                 title="Grubhub"
               >
-                <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" />
-              </a>
-              <a
-                href="https://www.ubereats.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="delivery-btn"
-                aria-label="Order on Uber Eats"
-                title="Uber Eats"
-              >
-                <img src="https://toppng.com/uploads/preview/uber-eats-logo-11609380482tcjqocukop.png" alt="Uber Eats" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="w-full h-auto" />
               </a>
             </div>
           </div>
@@ -454,33 +434,15 @@ export default function MenuPage() {
             Enjoy the convenience of having our delectable dishes delivered right to your doorstep. Perfect for busy
             days or cozy nights at home—savor the authentic flavors of La Estancia wherever you are.
           </p>
-          <div className="mt-4 flex items-center gap-3">
-            <a
-              href="https://www.doordash.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="delivery-btn"
-              aria-label="Order on DoorDash"
-            >
-              <img src="https://toppng.com/uploads/preview/doordash-logo-11609359542nd1g660y5t.png" alt="DoorDash" />
-            </a>
+          <div className="mt-4 flex items-center justify-center">
             <a
               href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
               target="_blank"
               rel="noopener noreferrer"
-              className="delivery-btn"
+              className="bg-white p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-warm hover:shadow-gold border border-border w-full max-w-sm"
               aria-label="Order on Grubhub"
             >
-              <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" />
-            </a>
-            <a
-              href="https://www.ubereats.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="delivery-btn"
-              aria-label="Order on Uber Eats"
-            >
-              <img src="https://toppng.com/uploads/preview/uber-eats-logo-11609380482tcjqocukop.png" alt="Uber Eats" />
+              <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="w-full h-auto" />
             </a>
           </div>
         </div>

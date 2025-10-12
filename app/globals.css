@@ -26,7 +26,7 @@
   }
   
   :root {
-    /* Sophisticated Argentine Steakhouse Color Palette */
+    /* Sophisticated Argentine Steakhouse Color Palette - LIGHTER BLUE TEST */
     --background: #f8f8f8; /*45 20% 97%; /* Warm cream background */
     --foreground: 25 25% 10%; /* Rich dark brown */
     --card: 0 0% 100%; /* Pure white cards */
@@ -35,11 +35,11 @@
     --popover-foreground: 25 25% 10%; /* Rich dark brown */
     --primary: 25 65% 32%; /* Saddle brown - rich leather */
     --primary-foreground: 0 0% 100%; /* White text on primary */
-    --secondary: 45 75% 52%; /* Elegant gold */
-    --secondary-foreground: 25 25% 10%; /* Dark text on gold */
+    --secondary: 210 70% 65%; /* Lighter elegant blue (was gold) */
+    --secondary-foreground: 0 0% 100%; /* White text on blue */
     --muted: 36 25% 95%; /* Light warm gray */
     --muted-foreground: 25 15% 45%; /* Warm gray text */
-    --accent: 25 50% 52%; /* Peru - warm accent */
+    --accent: 210 70% 65%; /* Lighter blue accent (was warm accent) */
     --accent-foreground: 0 0% 100%; /* White on accent */
     --destructive: 0 84% 60%; /* Red for errors */
     --destructive-foreground: 0 0% 100%; /* White on red */
@@ -47,10 +47,10 @@
     --input: 0 0% 100%; /* White input */
     --ring: 25 65% 32%; /* Brown focus ring */
     --chart-1: 25 65% 32%; /* Saddle brown */
-    --chart-2: 45 75% 52%; /* Gold */
+    --chart-2: 210 70% 65%; /* Lighter Blue (was Gold) */
     --chart-3: 25 25% 10%; /* Dark brown */
     --chart-4: 36 25% 95%; /* Light warm */
-    --chart-5: 25 50% 52%; /* Peru */
+    --chart-5: 210 70% 65%; /* Lighter Blue (was Peru) */
     --radius: 0.75rem;
   }
 
@@ -92,7 +92,7 @@
   body {
     @apply bg-background text-foreground font-inter antialiased;
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(45 75% 52% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 25% 25%, hsl(210 70% 65% / 0.05) 0%, transparent 50%),
       radial-gradient(circle at 75% 75%, hsl(25 65% 32% / 0.05) 0%, transparent 50%);
   }
 }
@@ -123,7 +123,7 @@
   }
   
   .gold-accent {
-    background: linear-gradient(135deg, hsl(45 75% 52%) 0%, hsl(51 100% 50%) 50%, hsl(45 75% 52%) 100%);
+    background: linear-gradient(135deg, hsl(210 70% 65%) 0%, hsl(210 80% 75%) 50%, hsl(210 70% 65%) 100%);
   }
   
   .wine-gradient {
@@ -136,12 +136,12 @@
   }
   
   .shadow-gold {
-    box-shadow: 0 10px 25px -3px hsl(45 75% 52% / 0.2), 0 4px 6px -2px hsl(45 75% 52% / 0.1);
+    box-shadow: 0 10px 25px -3px hsl(210 70% 65% / 0.2), 0 4px 6px -2px hsl(210 70% 65% / 0.1);
   }
   
   /* Text effects */
   .text-gold-gradient {
-    background: linear-gradient(135deg, hsl(45 75% 52%) 0%, hsl(51 100% 50%) 50%, hsl(45 75% 52%) 100%);
+    background: linear-gradient(135deg, hsl(210 70% 65%) 0%, hsl(210 80% 75%) 50%, hsl(210 70% 65%) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -165,7 +165,7 @@
   .nav-glass {
     backdrop-filter: blur(12px);
     background: hsl(45 20% 97% / 0.9);
-    border-bottom: 1px solid hsl(45 75% 52% / 0.2);
+    border-bottom: 1px solid hsl(210 70% 65% / 0.2);
   }
   
   /* Button styles */
@@ -193,7 +193,7 @@
   
   /* Section dividers */
   .section-divider {
-    background: linear-gradient(90deg, transparent 0%, hsl(45 75% 52%) 20%, hsl(25 65% 32%) 50%, hsl(45 75% 52%) 80%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, hsl(210 70% 65%) 20%, hsl(25 65% 32%) 50%, hsl(210 70% 65%) 80%, transparent 100%);
     height: 2px;
     margin: 4rem 0;
   }

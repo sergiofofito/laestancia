@@ -35,11 +35,11 @@ export function RestaurantSchema() {
     "acceptsReservations": true,
     "hasMenu": "https://www.laestanciasteakhouse.com/food",
     "image": [
-      "https://www.laestanciasteakhouse.com/images/la-estancia-logo-transparent.png",
+      "https://www.laestanciasteakhouse.com/images/main_logo.png",
       "https://www.laestanciasteakhouse.com/images/premium-ribeye-steak-with-chimichurri-sauce-on-ele.jpg",
       "https://www.laestanciasteakhouse.com/images/elegant-steakhouse-interior-with-warm-lighting-and.jpg"
     ],
-    "logo": "https://www.laestanciasteakhouse.com/images/la-estancia-logo-transparent.png",
+    "logo": "https://www.laestanciasteakhouse.com/images/main_logo.png",
     "sameAs": [
       "https://www.facebook.com/laestanciasteakhouse",
       "https://www.instagram.com/laestanciasteakhouse",
@@ -141,8 +141,8 @@ export function LocalBusinessSchema() {
     "parkingAvailable": true,
     "wheelchairAccessible": true,
     "smokingAllowed": false,
-    "image": "https://www.laestanciasteakhouse.com/images/la-estancia-logo-transparent.png",
-    "logo": "https://www.laestanciasteakhouse.com/images/la-estancia-logo-transparent.png"
+    "image": "https://www.laestanciasteakhouse.com/images/main_logo.png",
+    "logo": "https://www.laestanciasteakhouse.com/images/main_logo.png"
   }
 
   return (
