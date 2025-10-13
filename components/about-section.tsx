@@ -44,40 +44,7 @@ export function AboutSection() {
               </p>
             </div>
 
-            {/* Features */}
-            <div className="grid grid-cols-2 gap-6 mt-12">
-              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/10 hover-lift">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-2xl">🥩</span>
-                </div>
-                <h3 className="font-playfair text-lg font-semibold text-foreground mb-2">Premium Cuts</h3>
-                <p className="font-inter text-sm text-muted-foreground">Authentic Argentine beef, perfectly grilled</p>
-              </div>
-              
-              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/10 hover-lift">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-2xl">🍷</span>
-                </div>
-                <h3 className="font-playfair text-lg font-semibold text-foreground mb-2">Fine Wines</h3>
-                <p className="font-inter text-sm text-muted-foreground">Curated selection of Argentine wines</p>
-              </div>
-              
-              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/10 hover-lift">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-2xl">👨‍🍳</span>
-                </div>
-                <h3 className="font-playfair text-lg font-semibold text-foreground mb-2">Expert Chefs</h3>
-                <p className="font-inter text-sm text-muted-foreground">Traditional techniques, modern presentation</p>
-              </div>
-              
-              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/10 hover-lift">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-2xl">✨</span>
-                </div>
-                <h3 className="font-playfair text-lg font-semibold text-foreground mb-2">Atmosphere</h3>
-                <p className="font-inter text-sm text-muted-foreground">Elegant and welcoming environment</p>
-              </div>
-            </div>
+            
           </div>
 
           {/* Image Collage */}

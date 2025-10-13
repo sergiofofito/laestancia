@@ -5,7 +5,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{
-          backgroundImage: `url('/images/steak.jpg')`,
+          backgroundImage: `url('/images/flags-hero.jpg')`,
         }}
       >
         {/* Sophisticated Overlay */}
@@ -85,41 +85,6 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </a>
         </div>
-
-        {/* Feature Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in-up stagger-4">
-          <div className="text-center group">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 backdrop-blur-sm border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-2xl">🥩</span>
-            </div>
-            <h3 className="font-playfair text-xl font-semibold mb-2">Premium Cuts</h3>
-            <p className="font-inter text-sm opacity-80">Authentic Argentine beef, grilled to perfection</p>
-          </div>
-          
-          <div className="text-center group">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 backdrop-blur-sm border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-2xl">🍷</span>
-            </div>
-            <h3 className="font-playfair text-xl font-semibold mb-2">Fine Wines</h3>
-            <p className="font-inter text-sm opacity-80">Curated selection of Argentine Malbecs</p>
-          </div>
-          
-          <div className="text-center group">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 backdrop-blur-sm border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-2xl">✨</span>
-            </div>
-            <h3 className="font-playfair text-xl font-semibold mb-2">Elegant Atmosphere</h3>
-            <p className="font-inter text-sm opacity-80">Sophisticated dining experience</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse" />
-        </div>
-        <p className="font-inter text-xs mt-2 opacity-70 tracking-widest uppercase">Scroll</p>
       </div>
 
       {/* Side Decorative Elements */}
