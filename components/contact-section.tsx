@@ -98,7 +98,7 @@ export function ContactSection() {
               <div>
                 <h3 className="font-playfair text-xl font-semibold mb-2">Email</h3>
                 <a 
-                  href="mailto:info@laestancia.com"
+                  href="mailto:laestanciamn@gmail.com"
                   className="font-inter text-secondary hover:text-accent transition-colors duration-300"
                 >
                   laestanciamn@gmail.com

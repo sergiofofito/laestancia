@@ -8,7 +8,7 @@ export function RestaurantSchema() {
     "description": "Authentic Argentinian and Uruguayan steakhouse in Minneapolis featuring premium steaks, traditional parrillada, and South American cuisine.",
     "url": "https://www.laestanciasteakhouse.com",
     "telephone": "+16122008377",
-    "email": "info@laestanciasteakhouse.com",
+    "email": "laestanciamn@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "4751 Nicollet Ave",
