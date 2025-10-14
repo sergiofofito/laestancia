@@ -46,7 +46,7 @@ export function HeroSection() {
             <span className="text-gold-gradient">La Estancia</span>
           </h1>
           <div className="font-inter text-lg md:text-xl lg:text-2xl font-light tracking-[0.2em] uppercase mb-6 opacity-90">
-            Authentic Argentine Steakhouse
+            Authentic Steakhouse
           </div>
         </div>
 
