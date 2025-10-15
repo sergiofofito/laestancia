@@ -70,10 +70,10 @@ export function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fade-in-up stagger-3">
           <a
             href="/food"
-            className="btn-primary font-playfair text-lg min-w-[200px] relative overflow-hidden group"
+            className="bg-blue-800 hover:bg-blue-900 text-white font-playfair text-lg min-w-[200px] px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden group"
           >
             <span className="relative z-10">View Our Menu</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
           <a
             href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn?date=2025-09-13&seats=2"
