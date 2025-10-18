@@ -35,7 +35,7 @@ export default function CateringMinneapolisPage() {
                 </span>
               </div>
               
-              <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-playfair text text-4xl lg:text-6xl font-bold text-foreground mb-6">
                 Catering <span className="text-gold-gradient">Minneapolis</span>
               </h1>
               
@@ -48,14 +48,14 @@ export default function CateringMinneapolisPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+16122008377"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Get Catering Quote</span>
                   <span>📞</span>
                 </a>
                 <a
                   href="/food"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>View Catering Menu</span>
                   <span>📋</span>
@@ -261,14 +261,14 @@ export default function CateringMinneapolisPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+16122008377"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Call for Quote</span>
                   <span>📞</span>
                 </a>
                 <a
                   href="mailto:catering@laestanciasteakhouse.com"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Email Catering</span>
                   <span>📧</span>

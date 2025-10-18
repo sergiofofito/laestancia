@@ -71,7 +71,7 @@ export function GallerySection() {
             </span>
           </div>
           
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Taste the <span className="text-gold-gradient">Tradition</span>
           </h2>
           
@@ -139,7 +139,7 @@ export function GallerySection() {
         <div className="text-center mt-16">
           <a
             href="/food"
-            className="btn-primary font-playfair text-lg inline-flex items-center space-x-2 group"
+            className="btn-primary font-inter text-lg inline-flex items-center space-x-2 group"
           >
             <span>Explore Full Menu</span>
             <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>

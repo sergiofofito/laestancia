@@ -35,7 +35,7 @@ export default function ArgentinianRestaurantEdinaPage() {
                 </span>
               </div>
               
-              <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-playfair text text-4xl lg:text-6xl font-bold text-foreground mb-6">
                 Argentinian Restaurant <span className="text-gold-gradient">Edina</span>
               </h1>
               
@@ -50,14 +50,14 @@ export default function ArgentinianRestaurantEdinaPage() {
                   href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Reserve Your Table</span>
                   <span>→</span>
                 </a>
                 <a
                   href="/food"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>View Menu</span>
                   <span>📋</span>
@@ -238,14 +238,14 @@ export default function ArgentinianRestaurantEdinaPage() {
                   href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Make Reservation</span>
                   <span>→</span>
                 </a>
                 <a
                   href="tel:+16122008377"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Call (612) 200-8377</span>
                   <span>📞</span>

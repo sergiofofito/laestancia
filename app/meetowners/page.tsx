@@ -39,7 +39,7 @@ export default function MeetOwnersPage() {
                 </span>
               </div>
               
-              <h1 className="font-playfair text-5xl lg:text-7xl font-bold text-foreground mb-8 animate-fade-in-up stagger-2">
+              <h1 className="font-playfair text text-5xl lg:text-7xl font-bold text-foreground mb-8 animate-fade-in-up stagger-2">
                 Who Are <span className="text-gold-gradient">We?</span>
               </h1>
               
@@ -87,7 +87,7 @@ export default function MeetOwnersPage() {
                   </span>
                 </div>
                 
-                <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-8">
+                <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-foreground mb-8">
                   Daniel & <span className="text-gold-gradient">Susana</span> Larumbe
                 </h2>
                 
@@ -113,11 +113,11 @@ export default function MeetOwnersPage() {
                 {/* Highlight Stats */}
                 <div className="grid grid-cols-2 gap-6 mt-8">
                   <div className="text-center p-4 rounded-xl bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/10">
-                    <div className="font-playfair text-2xl font-bold text-accent mb-1">🇺🇾</div>
+                    <div className="font-inter text-2xl font-bold text-accent mb-1">🇺🇾</div>
                     <div className="font-inter text-sm text-muted-foreground">From Uruguay</div>
                   </div>
                   <div className="text-center p-4 rounded-xl bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/10">
-                    <div className="font-playfair text-2xl font-bold text-accent mb-1">⚽</div>
+                    <div className="font-inter text-2xl font-bold text-accent mb-1">⚽</div>
                     <div className="font-inter text-sm text-muted-foreground">Pro Soccer Player</div>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export default function MeetOwnersPage() {
                   </span>
                 </div>
                 
-                <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-8">
+                <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-foreground mb-8">
                   Chef <span className="text-gold-gradient">Lui</span>
                 </h2>
                 
@@ -186,15 +186,15 @@ export default function MeetOwnersPage() {
                 {/* Experience Stats */}
                 <div className="grid grid-cols-3 gap-4 mt-8">
                   <div className="text-center p-4 rounded-xl bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/10">
-                    <div className="font-playfair text-2xl font-bold text-accent mb-1">6+</div>
+                    <div className="font-inter text-2xl font-bold text-accent mb-1">6+</div>
                     <div className="font-inter text-xs text-muted-foreground">Countries</div>
                   </div>
                   <div className="text-center p-4 rounded-xl bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/10">
-                    <div className="font-playfair text-2xl font-bold text-accent mb-1">🇦🇷</div>
+                    <div className="font-inter text-2xl font-bold text-accent mb-1">🇦🇷</div>
                     <div className="font-inter text-xs text-muted-foreground">Argentina</div>
                   </div>
                   <div className="text-center p-4 rounded-xl bg-gradient-to-br from-secondary/5 to-accent/5 border border-secondary/10">
-                    <div className="font-playfair text-2xl font-bold text-accent mb-1">👨‍🍳</div>
+                    <div className="font-inter text-2xl font-bold text-accent mb-1">👨‍🍳</div>
                     <div className="font-inter text-xs text-muted-foreground">Expert Chef</div>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export default function MeetOwnersPage() {
                 </span>
               </div>
               
-              <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-8">
+              <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-foreground mb-8">
                 Bringing La Estancia <span className="text-gold-gradient">To You</span>
               </h2>
             </div>

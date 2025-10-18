@@ -24,7 +24,7 @@ export function ReservationSection() {
               </span>
             </div>
             
-            <h2 className="font-playfair text-4xl lg:text-6xl font-bold mb-6 text-shadow-warm">
+            <h2 className="font-playfair text text-4xl lg:text-6xl font-bold mb-6 text-shadow-warm">
               Reserve Your <span className="text-gold-gradient">Table</span>
             </h2>
             
@@ -68,7 +68,7 @@ export function ReservationSection() {
                 href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn?date=2025-09-13&seats=2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary w-full font-playfair text-lg inline-flex items-center justify-center"
+                className="btn-secondary w-full font-inter text-lg inline-flex items-center justify-center"
               >
                 Book Table
               </a>
@@ -106,7 +106,7 @@ export function ReservationSection() {
                 href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn?date=2025-09-13&seats=2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary w-full font-playfair text-lg inline-flex items-center justify-center"
+                className="btn-primary w-full font-inter text-lg inline-flex items-center justify-center"
               >
                 Plan Event
               </a>

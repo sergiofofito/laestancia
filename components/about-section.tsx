@@ -84,7 +84,7 @@ export function AboutSection() {
 
             {/* Decorative Elements */}
             <div className="absolute top-4 left-4 w-16 h-16 border-2 border-secondary rounded-full bg-secondary/10 backdrop-blur-sm flex items-center justify-center">
-              <span className="font-playfair text-secondary font-bold">AR</span>
+              <span className="font-inter text-secondary font-bold">AR</span>
             </div>
           </div>
         </div>

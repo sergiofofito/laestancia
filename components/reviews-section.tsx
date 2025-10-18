@@ -43,7 +43,7 @@ export function ReviewsSection() {
             </span>
           </div>
           
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Exceptional <span className="text-gold-gradient">Experiences</span>
           </h2>
           
@@ -75,7 +75,7 @@ export function ReviewsSection() {
               {/* Reviewer Info */}
               <div className="flex items-center justify-between pt-4 border-t border-border/30">
                 <div>
-                  <div className="font-playfair font-semibold text-foreground">{review.name}</div>
+                  <div className="font-inter font-semibold text-foreground">{review.name}</div>
                   <div className="font-inter text-sm text-muted-foreground">{review.date}</div>
                 </div>
                 
@@ -97,7 +97,7 @@ export function ReviewsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             {/* Overall Score */}
             <div className="text-center lg:text-left">
-              <div className="font-playfair text-5xl lg:text-6xl font-bold text-accent mb-2">4.9</div>
+              <div className="font-playfair text text-5xl lg:text-6xl font-bold text-accent mb-2">4.9</div>
               <div className="flex items-center justify-center lg:justify-start mb-2">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-secondary text-2xl">★</span>
@@ -128,7 +128,7 @@ export function ReviewsSection() {
             
             {/* Review Platforms */}
             <div className="text-center lg:text-right">
-              <div className="font-playfair text-lg font-semibold text-foreground mb-4">
+              <div className="font-inter text-lg font-semibold text-foreground mb-4">
                 Find us on
               </div>
               <div className="flex items-center justify-center lg:justify-end space-x-4">
@@ -158,7 +158,7 @@ export function ReviewsSection() {
             href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn?date=2025-09-13&seats=2"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary font-playfair text-lg inline-flex items-center space-x-2 group"
+            className="btn-primary font-inter text-lg inline-flex items-center space-x-2 group"
           >
             <span>Make Reservation</span>
             <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>

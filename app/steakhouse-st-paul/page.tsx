@@ -35,7 +35,7 @@ export default function SteakhouseStPaulPage() {
                 </span>
               </div>
               
-              <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-playfair text text-4xl lg:text-6xl font-bold text-foreground mb-6">
                 Catering <span className="text-gold-gradient">St Paul</span>
               </h1>
               
@@ -50,14 +50,14 @@ export default function SteakhouseStPaulPage() {
                   href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Reserve Your Table</span>
                   <span>→</span>
                 </a>
                 <a
                   href="/food"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>View Menu</span>
                   <span>📋</span>
@@ -91,21 +91,21 @@ export default function SteakhouseStPaulPage() {
                     <div className="flex items-start space-x-4">
                       <span className="text-accent font-bold">•</span>
                       <div>
-                        <h4 className="font-inter font-semibold text-foreground">CAB Ribeye & New York Strip</h4>
+                        <h4 className="font-playfair font-semibold text-foreground">CAB Ribeye & New York Strip</h4>
                         <p className="font-inter text-sm text-muted-foreground">Hand-selected cuts grilled to perfection over our authentic parrilla</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <span className="text-accent font-bold">•</span>
                       <div>
-                        <h4 className="font-inter font-semibold text-foreground">Traditional Asado de Tira</h4>
+                        <h4 className="font-playfair font-semibold text-foreground">Traditional Asado de Tira</h4>
                         <p className="font-inter text-sm text-muted-foreground">Bone-in short ribs that St Paul diners rave about</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <span className="text-accent font-bold">•</span>
                       <div>
-                        <h4 className="font-inter font-semibold text-foreground">House-made Chimichurri</h4>
+                        <h4 className="font-playfair font-semibold text-foreground">House-made Chimichurri</h4>
                         <p className="font-inter text-sm text-muted-foreground">Secret family recipe that perfectly complements our steaks</p>
                       </div>
                     </div>
@@ -120,21 +120,21 @@ export default function SteakhouseStPaulPage() {
                     <div className="flex items-start space-x-4">
                       <span className="text-accent font-bold">•</span>
                       <div>
-                        <h4 className="font-inter font-semibold text-foreground">Easy Drive from St Paul</h4>
+                        <h4 className="font-playfair font-semibold text-foreground">Easy Drive from St Paul</h4>
                         <p className="font-inter text-sm text-muted-foreground">Just 15 minutes from downtown St Paul via I-94</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <span className="text-accent font-bold">•</span>
                       <div>
-                        <h4 className="font-inter font-semibold text-foreground">Ample Parking</h4>
+                        <h4 className="font-playfair font-semibold text-foreground">Ample Parking</h4>
                         <p className="font-inter text-sm text-muted-foreground">Free parking for all St Paul guests</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <span className="text-accent font-bold">•</span>
                       <div>
-                        <h4 className="font-inter font-semibold text-foreground">Reservations Welcome</h4>
+                        <h4 className="font-playfair font-semibold text-foreground">Reservations Welcome</h4>
                         <p className="font-inter text-sm text-muted-foreground">Book ahead to guarantee your St Paul dining experience</p>
                       </div>
                     </div>
@@ -164,7 +164,7 @@ export default function SteakhouseStPaulPage() {
                     Perfect for St Paul couples - a mixed grill featuring ribeye, skirt steak, 
                     chorizo, and morcilla with chimichurri and salsa criolla.
                   </p>
-                  <span className="font-playfair text-lg font-semibold text-accent">$127</span>
+                  <span className="font-inter text-lg font-semibold text-accent">$127</span>
                 </div>
 
                 <div className="bg-white rounded-2xl p-6 shadow-warm border border-border/50">
@@ -175,7 +175,7 @@ export default function SteakhouseStPaulPage() {
                     A show-stopping 32oz bone-in ribeye that's become legendary among 
                     St Paul steak enthusiasts. Perfect for sharing.
                   </p>
-                  <span className="font-playfair text-lg font-semibold text-accent">$135</span>
+                  <span className="font-inter text-lg font-semibold text-accent">$135</span>
                 </div>
 
                 <div className="bg-white rounded-2xl p-6 shadow-warm border border-border/50">
@@ -186,7 +186,7 @@ export default function SteakhouseStPaulPage() {
                     Breaded beef topped with ham, mozzarella, and provolone - 
                     a comfort food favorite among St Paul families.
                   </p>
-                  <span className="font-playfair text-lg font-semibold text-accent">$28</span>
+                  <span className="font-inter text-lg font-semibold text-accent">$28</span>
                 </div>
               </div>
             </div>
@@ -211,14 +211,14 @@ export default function SteakhouseStPaulPage() {
                   href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Make Reservation</span>
                   <span>→</span>
                 </a>
                 <a
                   href="tel:+16122008377"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Call (612) 200-8377</span>
                   <span>📞</span>

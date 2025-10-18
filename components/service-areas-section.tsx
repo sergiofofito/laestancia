@@ -53,7 +53,7 @@ export function ServiceAreasSection() {
               </span>
             </div>
             
-            <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Restaurant & <span className="text-gold-gradient">Catering Services</span>
             </h2>
             
@@ -133,7 +133,7 @@ export function ServiceAreasSection() {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
-                <h4 className="font-inter font-semibold text-foreground mb-2">West Metro</h4>
+                <h4 className="font-playfair font-semibold text-foreground mb-2">West Metro</h4>
                 <ul className="font-inter text-sm text-muted-foreground space-y-1">
                   <li>Minnetonka</li>
                   <li>Plymouth</li>
@@ -142,7 +142,7 @@ export function ServiceAreasSection() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-inter font-semibold text-foreground mb-2">South Metro</h4>
+                <h4 className="font-playfair font-semibold text-foreground mb-2">South Metro</h4>
                 <ul className="font-inter text-sm text-muted-foreground space-y-1">
                   <li>Bloomington</li>
                   <li>Richfield</li>
@@ -151,7 +151,7 @@ export function ServiceAreasSection() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-inter font-semibold text-foreground mb-2">North Metro</h4>
+                <h4 className="font-playfair font-semibold text-foreground mb-2">North Metro</h4>
                 <ul className="font-inter text-sm text-muted-foreground space-y-1">
                   <li>Maple Grove</li>
                   <li>Brooklyn Park</li>
@@ -160,7 +160,7 @@ export function ServiceAreasSection() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-inter font-semibold text-foreground mb-2">East Metro</h4>
+                <h4 className="font-playfair font-semibold text-foreground mb-2">East Metro</h4>
                 <ul className="font-inter text-sm text-muted-foreground space-y-1">
                   <li>Woodbury</li>
                   <li>Oakdale</li>
@@ -173,7 +173,7 @@ export function ServiceAreasSection() {
             <div className="text-center mt-8">
               <a
                 href="/catering-services"
-                className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
               >
                 <span>View All Catering Services</span>
                 <span>→</span>

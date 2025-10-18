@@ -10,8 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        playfair: ['sans-serif', 'serif'],
-        inter: ['sans-serif', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
+        inter: ['Open Sans', 'sans-serif'],
+        sans: ['Open Sans', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

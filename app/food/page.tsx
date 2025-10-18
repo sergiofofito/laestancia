@@ -327,7 +327,7 @@ function ItemCard({ item }: { item: MenuItem }) {
         </div>
         {item.price && (
           <div className="flex-shrink-0">
-            <span className="font-playfair text-lg lg:text-xl font-semibold text-accent">
+            <span className="font-inter text-lg lg:text-xl font-semibold text-accent">
               {item.price}
             </span>
           </div>
@@ -366,9 +366,9 @@ export default function MenuPage() {
                   <img 
                     src="/images/flagstogether.png" 
                     alt="La Estancia Steakhouse" 
-                    className="h-16 lg:h-20 w-auto mx-auto mb-4 brightness-0 invert" 
+                    className="h-16 lg:h-20 w-auto mx-auto mb-4" 
                   />
-                  <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground text-center">
+                  <h1 className="font-playfair text text-4xl lg:text-6xl font-bold text-foreground text-center">
                     <span className="text-gold-gradient">Menu</span>
                   </h1>
                 </div>
@@ -408,7 +408,7 @@ export default function MenuPage() {
                 href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn?date=2025-09-13&seats=2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
               >
                 <span>Book Private Dining</span>
                 <span>→</span>

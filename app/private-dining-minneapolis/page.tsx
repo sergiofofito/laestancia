@@ -35,7 +35,7 @@ export default function PrivateDiningMinneapolisPage() {
                 </span>
               </div>
               
-              <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-playfair text text-4xl lg:text-6xl font-bold text-foreground mb-6">
                 Private Dining <span className="text-gold-gradient">Minneapolis</span>
               </h1>
               
@@ -50,14 +50,14 @@ export default function PrivateDiningMinneapolisPage() {
                   href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Reserve Private Dining</span>
                   <span>→</span>
                 </a>
                 <a
                   href="tel:+16122008377"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Call (612) 200-8377</span>
                   <span>📞</span>
@@ -168,14 +168,14 @@ export default function PrivateDiningMinneapolisPage() {
                   href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Reserve Now</span>
                   <span>→</span>
                 </a>
                 <a
                   href="/food"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>View Menu</span>
                   <span>📋</span>

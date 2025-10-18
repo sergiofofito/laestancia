@@ -108,7 +108,7 @@ export default function CateringServicesPage() {
                 </span>
               </div>
               
-              <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-playfair text text-4xl lg:text-6xl font-bold text-foreground mb-6">
                 Catering <span className="text-gold-gradient">Services</span>
               </h1>
               
@@ -131,14 +131,14 @@ export default function CateringServicesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+16122008377"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Get Catering Quote</span>
                   <span>📞</span>
                 </a>
                 <a
                   href="/food"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>View Menu</span>
                   <span>📋</span>
@@ -173,7 +173,7 @@ export default function CateringServicesPage() {
                     </p>
                     
                     <div className="space-y-3">
-                      <h4 className="font-inter font-semibold text-foreground text-sm uppercase tracking-wide">
+                      <h4 className="font-playfair font-semibold text-foreground text-sm uppercase tracking-wide">
                         Catering Services for {area.city}:
                       </h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -291,14 +291,14 @@ export default function CateringServicesPage() {
                   href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-primary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Reserve Table</span>
                   <span>→</span>
                 </a>
                 <a
                   href="tel:+16122008377"
-                  className="btn-secondary font-playfair text-lg inline-flex items-center space-x-2"
+                  className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Call for Catering</span>
                   <span>📞</span>
