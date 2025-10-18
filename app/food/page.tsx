@@ -362,9 +362,16 @@ export default function MenuPage() {
                   </span>
                 </div>
                 
-                <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground mb-6">
-                  La Estancia <span className="text-gold-gradient">Menu</span>
-                </h1>
+                <div className="mb-6">
+                  <img 
+                    src="/images/flagstogether.png" 
+                    alt="La Estancia Steakhouse" 
+                    className="h-16 lg:h-20 w-auto mx-auto mb-4 brightness-0 invert" 
+                  />
+                  <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-foreground text-center">
+                    <span className="text-gold-gradient">Menu</span>
+                  </h1>
+                </div>
                 
                 <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                   Experience the authentic flavors of Argentina and Uruguay. Each dish is crafted with passion, 

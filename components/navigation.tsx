@@ -46,12 +46,11 @@ export function Navigation() {
               }`}
             />
             <div className="ml-4 hidden lg:block">
-              <h1 className="font-playfair text-xl font-bold text-foreground">
-                La Estancia
-              </h1>
-              <p className="font-inter text-xs text-muted-foreground tracking-widest uppercase">
-                Steakhouse
-              </p>
+              <img 
+                src="/images/flagstogether.png" 
+                alt="Argentina and Uruguay Flags" 
+                className="h-8 w-auto" 
+              />
             </div>
           </div>
 

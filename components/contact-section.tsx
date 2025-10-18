@@ -20,9 +20,16 @@ export function ContactSection() {
             </span>
           </div>
           
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold mb-6">
-            Visit <span className="text-gold-gradient">La Estancia</span>
-          </h2>
+          <div className="mb-6">
+            <img 
+              src="/images/flagstogether.png" 
+              alt="La Estancia Steakhouse" 
+              className="h-16 lg:h-20 w-auto mx-auto mb-4" 
+            />
+            <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-center">
+              Visit <span className="text-gold-gradient">La Estancia</span>
+            </h2>
+          </div>
           
           <p className="font-inter text-xl leading-relaxed opacity-90">
             We're ready to welcome you for an unforgettable Argentinean/Uruguayan dining experience 
@@ -184,7 +191,11 @@ export function ContactSection() {
                 className="h-12 w-auto"
               />
               <div>
-                <div className="font-playfair text-lg font-bold">La Estancia</div>
+                <img 
+                  src="/images/flagstogether.png" 
+                  alt="La Estancia Steakhouse" 
+                  className="h-6 w-auto mb-2 brightness-0 invert" 
+                />
                 <div className="font-inter text-sm opacity-70">© 2024 All rights reserved</div>
               </div>
             </div>

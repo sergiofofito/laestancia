@@ -42,9 +42,13 @@ export function HeroSection() {
 
         {/* Main Heading */}
         <div className="mb-8 animate-fade-in-up stagger-1">
-          <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold mb-4 text-shadow-warm">
-            <span className="text-gold-gradient">La Estancia</span>
-          </h1>
+          <div className="mb-4">
+            <img 
+              src="/images/reallogo.png" 
+              alt="La Estancia Steakhouse" 
+              className="h-24 md:h-32 lg:h-40 w-auto mx-auto drop-shadow-2xl brightness-0 invert" 
+            />
+          </div>
           <div className="font-inter text-lg md:text-xl lg:text-2xl font-light tracking-[0.2em] uppercase mb-6 opacity-90">
             Authentic Steakhouse
           </div>
