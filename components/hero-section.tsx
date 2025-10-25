@@ -26,18 +26,9 @@ export function HeroSection() {
       <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
         {/* Elegant Logo Display */}
         <div className="mb-12 animate-fade-in-up">
-          <img 
-            src="/images/main_logo.png" 
-            alt="La Estancia Logo" 
-            className="h-32 lg:h-40 w-auto mx-auto mb-8 drop-shadow-2xl" 
-          />
           
-          {/* Decorative Line */}
-          <div className="flex items-center justify-center mb-8">
-            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-secondary"></div>
-            <div className="w-4 h-4 mx-4 rotate-45 border-2 border-secondary bg-secondary/20"></div>
-            <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-secondary"></div>
-          </div>
+          
+
         </div>
 
         {/* Main Heading */}
