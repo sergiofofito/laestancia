@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
+import { Home, Truck, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Catering Services | La Estancia Steakhouse - Twin Cities Argentinian Catering",
@@ -102,28 +103,28 @@ export default function CateringServicesPage() {
           
           <div className="relative z-10 container mx-auto px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-                <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 border border-secondary/50 mb-6">
+                <span className="font-inter text-sm font-medium text-accent tracking-widest uppercase">
                   Twin Cities Catering Services
                 </span>
               </div>
               
-              <h1 className="font-playfair text text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-playfair text text-4xl lg:text-6xl font-bold text-foreground mb-6 text-center">
                 Catering <span className="text-gold-gradient">Services</span>
               </h1>
               
-              <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
+              <p className="font-inter text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed mb-8 text-center">
                 Located in Tangletown, Minneapolis at 4751 Nicollet Ave, La Estancia provides premium 
                 Argentinian catering services throughout the Twin Cities metro area. Bring our authentic 
                 steakhouse experience to your event, wherever you are in the Twin Cities.
               </p>
 
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-border/50">
-                <h3 className="font-playfair text-xl font-bold text-foreground mb-2">Our Restaurant Location</h3>
-                <p className="font-inter text-muted-foreground">
+              <div className="bg-card backdrop-blur-sm rounded-2xl p-6 mb-8 border border-border">
+                <h3 className="font-playfair text-xl font-bold text-foreground mb-2 text-center">Our Restaurant Location</h3>
+                <p className="font-inter text-foreground/80 text-center">
                   📍 4751 Nicollet Ave, Tangletown, Minneapolis, MN 55419
                 </p>
-                <p className="font-inter text-sm text-muted-foreground mt-2">
+                <p className="font-inter text-sm text-foreground/70 mt-2 text-center">
                   Visit us for dine-in or let us bring La Estancia to your event!
                 </p>
               </div>
@@ -156,7 +157,7 @@ export default function CateringServicesPage() {
                 <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-6">
                   Twin Cities Communities We <span className="text-gold-gradient">Cater To</span>
                 </h2>
-                <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                <p className="font-inter text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed">
                   Our restaurant is located in Tangletown, Minneapolis, but we bring our authentic 
                   Argentinian steakhouse experience to events throughout the Twin Cities metro area.
                 </p>
@@ -164,16 +165,16 @@ export default function CateringServicesPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {cateringAreas.map((area, index) => (
-                  <div key={index} className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
-                    <h3 className="font-playfair text-2xl font-bold text-foreground mb-4">
+                  <div key={index} className="bg-card rounded-2xl p-8 shadow-warm border border-border">
+                    <h3 className="font-playfair text-2xl font-bold text-foreground mb-4 text-center">
                       {area.city} Catering
                     </h3>
-                    <p className="font-inter text-muted-foreground mb-6 leading-relaxed">
+                    <p className="font-inter text-foreground/70 mb-6 leading-relaxed text-center">
                       {area.description}
                     </p>
                     
                     <div className="space-y-3">
-                      <h4 className="font-playfair font-semibold text-foreground text-sm uppercase tracking-wide">
+                      <h4 className="font-playfair font-semibold text-foreground text-sm uppercase tracking-wide text-center">
                         Catering Services for {area.city}:
                       </h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -207,37 +208,41 @@ export default function CateringServicesPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                    <span className="text-3xl">🏠</span>
+                <div className="bg-card rounded-2xl p-8 shadow-warm border border-border">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                    <Home className="h-10 w-10 text-white" />
                   </div>
                   <h3 className="font-playfair text-2xl font-bold text-foreground mb-4 text-center">
                     Visit Our Restaurant
                   </h3>
                   <div className="text-center space-y-2 mb-6">
-                    <p className="font-inter text-foreground font-semibold">4751 Nicollet Ave</p>
-                    <p className="font-inter text-muted-foreground">Tangletown, Minneapolis, MN 55419</p>
-                    <p className="font-inter text-muted-foreground">📞 (612) 200-8377</p>
+                    <p className="font-inter text-accent font-semibold">4751 Nicollet Ave</p>
+                    <p className="font-inter text-foreground/80">Tangletown, Minneapolis, MN 55419</p>
+                    <p className="font-inter text-foreground/80 flex items-center justify-center gap-2">
+                      <Phone className="h-4 w-4" /> (612) 200-8377
+                    </p>
                   </div>
-                  <p className="font-inter text-muted-foreground text-center leading-relaxed">
+                  <p className="font-inter text-foreground/70 text-center leading-relaxed">
                     Experience our full menu and authentic Argentinian atmosphere at our 
                     beautiful Tangletown location in Minneapolis.
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                    <span className="text-3xl">🚚</span>
+                <div className="bg-card rounded-2xl p-8 shadow-warm border border-border">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                    <Truck className="h-10 w-10 text-white" />
                   </div>
                   <h3 className="font-playfair text-2xl font-bold text-foreground mb-4 text-center">
                     Twin Cities Catering
                   </h3>
                   <div className="text-center space-y-2 mb-6">
-                    <p className="font-inter text-foreground font-semibold">We Come to You!</p>
-                    <p className="font-inter text-muted-foreground">Throughout Twin Cities Metro</p>
-                    <p className="font-inter text-muted-foreground">📞 (612) 200-8377</p>
+                    <p className="font-inter text-accent font-semibold">We Come to You!</p>
+                    <p className="font-inter text-foreground/80">Throughout Twin Cities Metro</p>
+                    <p className="font-inter text-foreground/80 flex items-center justify-center gap-2">
+                      <Phone className="h-4 w-4" /> (612) 200-8377
+                    </p>
                   </div>
-                  <p className="font-inter text-muted-foreground text-center leading-relaxed">
+                  <p className="font-inter text-foreground/70 text-center leading-relaxed">
                     Bring La Estancia's premium Argentinian cuisine to your event anywhere 
                     in the Twin Cities metro area with our professional catering services.
                   </p>
@@ -247,25 +252,58 @@ export default function CateringServicesPage() {
           </div>
         </section>
 
+        {/* Catering Request Form */}
+        <section className="py-16 lg:py-24 bg-gradient-to-br from-muted to-background">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                  Request <span className="text-gold-gradient">Catering Quote</span>
+                </h2>
+                <p className="font-inter text-lg text-foreground/80 leading-relaxed">
+                  Fill out the form below and we'll get back to you with a customized catering proposal.
+                </p>
+              </div>
+
+              <div className="bg-card rounded-3xl p-4 lg:p-8 shadow-warm border border-border">
+                <div className="w-full overflow-hidden rounded-xl">
+                  <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdm3DhCJYMCnQK7BPFJ55hCMjqM-m3caqzNi4ehZKLofSjf0A/viewform?embedded=true" 
+                    width="100%" 
+                    height="1257" 
+                    frameBorder="0" 
+                    marginHeight={0} 
+                    marginWidth={0}
+                    className="w-full"
+                    title="Catering Request Form"
+                  >
+                    Loading…
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact & Booking */}
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50">
+            <div className="max-w-4xl mx-auto bg-card rounded-3xl p-8 lg:p-12 shadow-warm border border-border">
               <div className="text-center mb-8">
                 <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-6">
                   Ready to Experience La Estancia?
                 </h2>
-                <p className="font-inter text-lg text-muted-foreground leading-relaxed">
+                <p className="font-inter text-lg text-foreground/80 leading-relaxed">
                   Visit our Tangletown restaurant or let us cater your Twin Cities event.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
-                  <h3 className="font-playfair text-xl font-bold text-foreground mb-4">
+                  <h3 className="font-playfair text-xl font-bold text-foreground mb-4 text-center md:text-left">
                     Restaurant Information
                   </h3>
-                  <div className="font-inter text-muted-foreground space-y-2">
+                  <div className="font-inter text-foreground/70 space-y-2 text-center md:text-left">
                     <p>📍 4751 Nicollet Ave, Tangletown, MN 55419</p>
                     <p>📞 (612) 200-8377</p>
                     <p>🚗 Parking available</p>
@@ -273,10 +311,10 @@ export default function CateringServicesPage() {
                 </div>
                 
                 <div>
-                  <h3 className="font-playfair text-xl font-bold text-foreground mb-4">
+                  <h3 className="font-playfair text-xl font-bold text-foreground mb-4 text-center md:text-left">
                     Catering Service Areas
                   </h3>
-                  <div className="font-inter text-muted-foreground space-y-2">
+                  <div className="font-inter text-foreground/70 space-y-2 text-center md:text-left">
                     <p>• Minneapolis & surrounding areas</p>
                     <p>• St Paul & East Metro</p>
                     <p>• Edina, Bloomington & South Metro</p>

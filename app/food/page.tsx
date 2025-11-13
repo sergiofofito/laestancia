@@ -1,5 +1,6 @@
 import React from "react"
 import { Navigation } from "@/components/navigation"
+import { Truck } from "lucide-react"
 
 type MenuItem = {
   id: string;
@@ -296,7 +297,7 @@ const sections: MenuSection[] = [
 
 function Badge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-secondary/20 to-accent/20 text-accent border border-accent/30">
+    <span className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 text-accent border border-accent/50">
       {children}
     </span>
   )
@@ -320,7 +321,7 @@ function ItemCard({ item }: { item: MenuItem }) {
             )}
           </div>
           {item.description && (
-            <p className="font-inter text-sm text-muted-foreground leading-relaxed">
+            <p className="font-inter text-sm text-foreground/70 leading-relaxed">
               {item.description}
             </p>
           )}
@@ -356,8 +357,8 @@ export default function MenuPage() {
             <div className="text-center max-w-4xl mx-auto">
               {/* Header */}
               <div className="mb-12">
-                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-                  <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 border border-secondary/50 mb-6">
+                  <span className="font-inter text-sm font-medium text-accent tracking-widest uppercase">
                     Authentic Argentine Cuisine
                   </span>
                 </div>
@@ -373,12 +374,12 @@ export default function MenuPage() {
                   </h1>
                 </div>
                 
-                <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                <p className="font-inter text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed text-center">
                   Experience the authentic flavors of Argentina and Uruguay. Each dish is crafted with passion, 
                   using traditional recipes and the finest ingredients.
                 </p>
                 
-                <div className="flex items-center justify-center mt-8 space-x-8 text-sm text-muted-foreground">
+                <div className="flex items-center justify-center mt-8 space-x-8 text-sm text-foreground/70">
                   <div className="flex items-center space-x-2">
                     <Badge>V</Badge>
                     <span>Vegetarian</span>
@@ -396,7 +397,7 @@ export default function MenuPage() {
                   href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-warm hover:shadow-gold border border-border w-full max-w-md group"
+                  className="bg-card p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-warm hover:shadow-gold border border-border w-full max-w-md group"
                   aria-label="Order on Grubhub"
                 >
                   <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="w-full h-auto" />
@@ -408,7 +409,7 @@ export default function MenuPage() {
                 href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn?date=2025-09-13&seats=2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
+                className="btn-secondary font-inter text-lg inline-flex items-center space-x-2 mx-auto"
               >
                 <span>Book Private Dining</span>
                 <span>→</span>
@@ -430,7 +431,7 @@ export default function MenuPage() {
                       {section.title}
                     </h2>
                     {section.subtitle && (
-                      <p className="font-inter text-lg text-muted-foreground italic">
+                      <p className="font-inter text-lg text-foreground/70 italic">
                         {section.subtitle}
                       </p>
                     )}
@@ -460,8 +461,8 @@ export default function MenuPage() {
               ))}
 
               {/* Disclaimer */}
-              <div className="bg-gradient-to-r from-muted/30 to-muted/20 rounded-2xl p-8 border border-border/50 text-center">
-                <p className="font-inter text-sm text-muted-foreground leading-relaxed">
+              <div className="bg-gradient-to-r from-muted/50 to-muted/30 rounded-2xl p-8 border border-border text-center">
+                <p className="font-inter text-sm text-foreground/70 leading-relaxed">
                   <strong>*</strong> Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of
                   foodborne illness, especially if you have certain medical conditions.
                 </p>
@@ -471,19 +472,19 @@ export default function MenuPage() {
         </section>
 
         {/* Delivery Promotion */}
-        <section className="py-16 lg:py-24 bg-gradient-to-br from-muted/20 to-background">
+        <section className="py-16 lg:py-24 bg-gradient-to-br from-muted to-background">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50">
+            <div className="max-w-4xl mx-auto bg-card rounded-3xl p-8 lg:p-12 shadow-warm border border-border">
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-3xl">🚚</span>
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                  <Truck className="h-10 w-10 text-white" />
                 </div>
                 
                 <h3 className="font-playfair text-2xl lg:text-3xl font-bold text-foreground mb-4">
                   Delivery Available
                 </h3>
                 
-                <p className="font-inter text-lg text-muted-foreground mb-8 leading-relaxed">
+                <p className="font-inter text-lg text-foreground/80 mb-8 leading-relaxed">
                   Bring the authentic flavors of La Estancia to your home. Perfect for special occasions, 
                   family dinners, or when you're craving exceptional Argentine cuisine.
                 </p>
@@ -493,7 +494,7 @@ export default function MenuPage() {
                     href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-warm hover:shadow-gold border border-border w-full max-w-md group"
+                    className="bg-muted p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-warm hover:shadow-gold border border-border w-full max-w-md group"
                     aria-label="Order on Grubhub"
                   >
                     <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="w-full h-auto" />

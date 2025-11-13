@@ -33,10 +33,10 @@ export function ServiceAreasSection() {
   ]
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-muted/10 to-background relative">
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-background to-muted relative">
       {/* Background Pattern */}
       <div 
-        className="absolute inset-0 opacity-15"
+        className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `url('/images/background.png')`,
           backgroundRepeat: 'repeat',
@@ -47,17 +47,17 @@ export function ServiceAreasSection() {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-              <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 border border-secondary/50 mb-6">
+              <span className="font-inter text-sm font-medium text-accent tracking-widest uppercase">
                 One Location, Twin Cities Catering
               </span>
             </div>
             
-            <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-foreground mb-6 text-center">
               Restaurant & <span className="text-gold-gradient">Catering Services</span>
             </h2>
             
-            <p className="font-inter text-lg text-muted-foreground leading-relaxed">
+            <p className="font-inter text-lg text-foreground/80 leading-relaxed text-center">
               Located in Tangletown, Minneapolis at 4751 Nicollet Ave, La Estancia provides 
               dine-in service and catering throughout the Twin Cities metro area.
             </p>
@@ -68,7 +68,7 @@ export function ServiceAreasSection() {
             {serviceAreas.map((area, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl overflow-hidden shadow-warm border border-border/50 hover:shadow-gold transition-all duration-500 hover:-translate-y-2"
+                className="group bg-card rounded-2xl overflow-hidden shadow-warm border border-border hover:shadow-gold transition-all duration-500 hover:-translate-y-2"
               >
                 {/* Image */}
                 <div className="aspect-video overflow-hidden">
@@ -81,10 +81,10 @@ export function ServiceAreasSection() {
                 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="font-playfair text-2xl font-bold text-foreground mb-3">
+                  <h3 className="font-playfair text-2xl font-bold text-foreground mb-3 text-center">
                     {area.city}
                   </h3>
-                  <p className="font-inter text-sm text-muted-foreground mb-4 leading-relaxed">
+                  <p className="font-inter text-sm text-foreground/70 mb-4 leading-relaxed text-center">
                     {area.description}
                   </p>
                   
@@ -93,7 +93,7 @@ export function ServiceAreasSection() {
                       <a
                         key={serviceIndex}
                         href={service.href}
-                        className="block font-inter text-sm text-accent hover:text-accent/80 transition-colors duration-300 flex items-center space-x-2"
+                        className="block font-inter text-sm text-accent hover:text-accent/80 transition-colors duration-300 flex items-center justify-center space-x-2"
                       >
                         <span>→</span>
                         <span>{service.name}</span>
@@ -106,27 +106,27 @@ export function ServiceAreasSection() {
           </div>
 
           {/* Restaurant Location Highlight */}
-          <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50 mb-8">
+          <div className="bg-card rounded-2xl p-8 shadow-warm border border-border mb-8">
             <div className="text-center mb-6">
               <h3 className="font-playfair text-2xl font-bold text-foreground mb-4">
                 Our Restaurant Location
               </h3>
-              <div className="font-inter text-lg text-foreground font-semibold mb-2">
+              <div className="font-inter text-lg text-accent font-semibold mb-2">
                 4751 Nicollet Ave, Tangletown, Minneapolis, MN 55419
               </div>
-              <p className="font-inter text-muted-foreground">
+              <p className="font-inter text-foreground/70">
                 Visit us for the full La Estancia experience or let us cater your event!
               </p>
             </div>
           </div>
 
           {/* Additional Catering Areas */}
-          <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
+          <div className="bg-card rounded-2xl p-8 shadow-warm border border-border">
             <div className="text-center mb-6">
               <h3 className="font-playfair text-2xl font-bold text-foreground mb-4">
                 We Also Provide Catering To These Twin Cities Communities
               </h3>
-              <p className="font-inter text-muted-foreground">
+              <p className="font-inter text-foreground/70">
                 Our restaurant is in Tangletown, Minneapolis, but we cater throughout the metro area
               </p>
             </div>
@@ -134,7 +134,7 @@ export function ServiceAreasSection() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
                 <h4 className="font-playfair font-semibold text-foreground mb-2">West Metro</h4>
-                <ul className="font-inter text-sm text-muted-foreground space-y-1">
+                <ul className="font-inter text-sm text-foreground/70 space-y-1">
                   <li>Minnetonka</li>
                   <li>Plymouth</li>
                   <li>Hopkins</li>
@@ -143,7 +143,7 @@ export function ServiceAreasSection() {
               </div>
               <div>
                 <h4 className="font-playfair font-semibold text-foreground mb-2">South Metro</h4>
-                <ul className="font-inter text-sm text-muted-foreground space-y-1">
+                <ul className="font-inter text-sm text-foreground/70 space-y-1">
                   <li>Bloomington</li>
                   <li>Richfield</li>
                   <li>Burnsville</li>
@@ -152,7 +152,7 @@ export function ServiceAreasSection() {
               </div>
               <div>
                 <h4 className="font-playfair font-semibold text-foreground mb-2">North Metro</h4>
-                <ul className="font-inter text-sm text-muted-foreground space-y-1">
+                <ul className="font-inter text-sm text-foreground/70 space-y-1">
                   <li>Maple Grove</li>
                   <li>Brooklyn Park</li>
                   <li>Coon Rapids</li>
@@ -161,7 +161,7 @@ export function ServiceAreasSection() {
               </div>
               <div>
                 <h4 className="font-playfair font-semibold text-foreground mb-2">East Metro</h4>
-                <ul className="font-inter text-sm text-muted-foreground space-y-1">
+                <ul className="font-inter text-sm text-foreground/70 space-y-1">
                   <li>Woodbury</li>
                   <li>Oakdale</li>
                   <li>Maplewood</li>

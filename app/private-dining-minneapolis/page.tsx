@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
+import { Phone, FileText, Beef, Wine, Users, MapPin, Clock, Car, Train } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Private Dining Minneapolis | La Estancia Steakhouse - Exclusive Events",
@@ -29,8 +30,8 @@ export default function PrivateDiningMinneapolisPage() {
           
           <div className="relative z-10 container mx-auto px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-                <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 border border-accent/50 mb-6">
+                <span className="font-inter text-sm font-medium text-accent tracking-widest uppercase">
                   Exclusive Minneapolis Venue
                 </span>
               </div>
@@ -39,7 +40,7 @@ export default function PrivateDiningMinneapolisPage() {
                 Private Dining <span className="text-gold-gradient">Minneapolis</span>
               </h1>
               
-              <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
+              <p className="font-inter text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed mb-8">
                 Experience the finest private dining Minneapolis has to offer at La Estancia Steakhouse. 
                 Our exclusive dining spaces provide the perfect setting for corporate events, celebrations, 
                 and intimate gatherings in the heart of Minneapolis.
@@ -60,7 +61,7 @@ export default function PrivateDiningMinneapolisPage() {
                   className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>Call (612) 200-8377</span>
-                  <span>📞</span>
+                  <Phone className="h-4 w-4" />
                 </a>
               </div>
             </div>
@@ -75,47 +76,47 @@ export default function PrivateDiningMinneapolisPage() {
                 <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-6">
                   Why Choose La Estancia for <span className="text-gold-gradient">Private Dining in Minneapolis</span>
                 </h2>
-                <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                <p className="font-inter text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed">
                   Located in the vibrant Minneapolis dining scene, La Estancia offers an unparalleled private dining experience 
                   that combines authentic Argentinian hospitality with modern Minneapolis sophistication.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                    <span className="text-2xl">🥩</span>
+                <div className="bg-card rounded-2xl p-8 shadow-warm border border-border/50">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                    <Beef className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="font-playfair text-xl font-bold text-foreground mb-4 text-center">
                     Premium Argentinian Steaks
                   </h3>
-                  <p className="font-inter text-muted-foreground text-center leading-relaxed">
+                  <p className="font-inter text-foreground/70 text-center leading-relaxed">
                     Serve your Minneapolis guests the finest cuts of Argentinian beef, perfectly grilled to order 
                     with traditional chimichurri and accompaniments.
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                    <span className="text-2xl">🍷</span>
+                <div className="bg-card rounded-2xl p-8 shadow-warm border border-border/50">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                    <Wine className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="font-playfair text-xl font-bold text-foreground mb-4 text-center">
                     Curated Wine Selection
                   </h3>
-                  <p className="font-inter text-muted-foreground text-center leading-relaxed">
+                  <p className="font-inter text-foreground/70 text-center leading-relaxed">
                     Complement your private dining experience with our extensive collection of Argentinian Malbecs 
                     and international wines, perfect for Minneapolis corporate events.
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-warm border border-border/50">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                    <span className="text-2xl">👥</span>
+                <div className="bg-card rounded-2xl p-8 shadow-warm border border-border/50">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                    <Users className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="font-playfair text-xl font-bold text-foreground mb-4 text-center">
                     Flexible Event Spaces
                   </h3>
-                  <p className="font-inter text-muted-foreground text-center leading-relaxed">
+                  <p className="font-inter text-foreground/70 text-center leading-relaxed">
                     Our Minneapolis location offers versatile private dining spaces accommodating 
                     intimate parties of 10 to grand celebrations of 100+ guests.
                   </p>
@@ -133,13 +134,13 @@ export default function PrivateDiningMinneapolisPage() {
                 Book Your Minneapolis Private Dining Experience
               </h2>
               
-              <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50 mb-8">
+              <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-warm border border-border/50 mb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="font-playfair text-xl font-bold text-foreground mb-4">
                       Perfect for Minneapolis Events
                     </h3>
-                    <ul className="font-inter text-muted-foreground space-y-2 text-left">
+                    <ul className="font-inter text-foreground/70 space-y-2 text-left">
                       <li>• Corporate dinners & business meetings</li>
                       <li>• Anniversary & birthday celebrations</li>
                       <li>• Holiday parties & team building</li>
@@ -152,12 +153,27 @@ export default function PrivateDiningMinneapolisPage() {
                     <h3 className="font-playfair text-xl font-bold text-foreground mb-4">
                       Minneapolis Location
                     </h3>
-                    <div className="font-inter text-muted-foreground space-y-2 text-left">
-                      <p>📍 123 Main Street, Minneapolis, MN 55401</p>
-                      <p>📞 (612) 200-8377</p>
-                      <p>🕒 Available 7 days a week</p>
-                      <p>🚗 Valet parking available</p>
-                      <p>🚇 Near downtown Minneapolis transit</p>
+                    <div className="font-inter text-foreground/70 space-y-3 text-left">
+                      <p className="flex items-center gap-2">
+                        <MapPin className="h-5 w-5 text-accent" />
+                        123 Main Street, Minneapolis, MN 55401
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <Phone className="h-5 w-5 text-accent" />
+                        (612) 200-8377
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <Clock className="h-5 w-5 text-accent" />
+                        Available 7 days a week
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <Car className="h-5 w-5 text-accent" />
+                        Valet parking available
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <Train className="h-5 w-5 text-accent" />
+                        Near downtown Minneapolis transit
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -178,7 +194,7 @@ export default function PrivateDiningMinneapolisPage() {
                   className="btn-secondary font-inter text-lg inline-flex items-center space-x-2"
                 >
                   <span>View Menu</span>
-                  <span>📋</span>
+                  <FileText className="h-4 w-4" />
                 </a>
               </div>
             </div>

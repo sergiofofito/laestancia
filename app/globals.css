@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 @layer base {
-  /* Global background pattern - more visible approach */
+  /* Global background pattern - dark rustic */
   body {
-    background: #f8f8f8 url('/images/background.png') repeat;
+    background: hsl(20 15% 12%) url('/images/background.png') repeat;
     background-size: 80px 80px;
     min-height: 100vh;
   }
@@ -26,31 +26,31 @@
   }
   
   :root {
-    /* Sophisticated Argentine Steakhouse Color Palette - LIGHTER BLUE TEST */
-    --background: #f8f8f8; /*45 20% 97%; /* Warm cream background */
-    --foreground: 25 25% 10%; /* Rich dark brown */
-    --card: 0 0% 100%; /* Pure white cards */
-    --card-foreground: 25 25% 10%; /* Rich dark brown */
-    --popover: 0 0% 100%; /* White popover */
-    --popover-foreground: 25 25% 10%; /* Rich dark brown */
-    --primary: 48 100% 50%; /* Bright golden yellow */
-    --primary-foreground: 25 25% 10%; /* Dark text on yellow */
-    --secondary: 210 70% 65%; /* Lighter elegant blue (was gold) */
-    --secondary-foreground: 0 0% 100%; /* White text on blue */
-    --muted: 36 25% 95%; /* Light warm gray */
-    --muted-foreground: 25 15% 45%; /* Warm gray text */
-    --accent: 210 70% 65%; /* Lighter blue accent (was warm accent) */
-    --accent-foreground: 0 0% 100%; /* White on accent */
+    /* Dark Rustic Argentine Steakhouse Color Palette */
+    --background: 20 15% 12%; /* Dark charcoal brown */
+    --foreground: 40 20% 90%; /* Light warm text */
+    --card: 20 20% 18%; /* Dark brown cards */
+    --card-foreground: 40 20% 90%; /* Light warm text */
+    --popover: 20 20% 18%; /* Dark brown popover */
+    --popover-foreground: 40 20% 90%; /* Light warm text */
+    --primary: 200 80% 65%; /* Light blue primary */
+    --primary-foreground: 0 0% 100%; /* White text on blue */
+    --secondary: 35 45% 50%; /* Rustic burnt orange/copper */
+    --secondary-foreground: 40 20% 95%; /* Light text on copper */
+    --muted: 20 15% 25%; /* Dark muted brown */
+    --muted-foreground: 40 15% 65%; /* Medium warm gray text */
+    --accent: 200 85% 70%; /* Light blue accent */
+    --accent-foreground: 0 0% 100%; /* White on blue accent */
     --destructive: 0 84% 60%; /* Red for errors */
     --destructive-foreground: 0 0% 100%; /* White on red */
-    --border: 36 25% 88%; /* Warm border */
-    --input: 0 0% 100%; /* White input */
-    --ring: 48 100% 50%; /* Yellow focus ring */
-    --chart-1: 48 100% 50%; /* Golden yellow */
-    --chart-2: 210 70% 65%; /* Lighter Blue (was Gold) */
-    --chart-3: 25 25% 10%; /* Dark brown */
-    --chart-4: 36 25% 95%; /* Light warm */
-    --chart-5: 210 70% 65%; /* Lighter Blue (was Peru) */
+    --border: 30 20% 30%; /* Darker warm border */
+    --input: 20 20% 18%; /* Dark input */
+    --ring: 200 80% 65%; /* Light blue focus ring */
+    --chart-1: 200 85% 70%; /* Light blue */
+    --chart-2: 35 45% 50%; /* Burnt orange */
+    --chart-3: 25 60% 45%; /* Deep brown */
+    --chart-4: 20 15% 25%; /* Dark muted */
+    --chart-5: 30 50% 40%; /* Saddle brown */
     --radius: 0.75rem;
   }
 
@@ -92,8 +92,8 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(210 70% 65% / 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(48 100% 50% / 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 25% 25%, hsl(35 45% 50% / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(200 85% 70% / 0.08) 0%, transparent 50%);
   }
 }
 
@@ -110,7 +110,7 @@
   /* Custom Argentine-inspired elements */
   .leather-texture {
     @apply relative;
-    background: linear-gradient(135deg, hsl(48 100% 50%) 0%, hsl(45 100% 60%) 50%, hsl(48 100% 50%) 100%);
+    background: linear-gradient(135deg, hsl(200 80% 65%) 0%, hsl(200 85% 75%) 50%, hsl(200 80% 65%) 100%);
   }
   
   .leather-texture::before {
@@ -123,7 +123,7 @@
   }
   
   .gold-accent {
-    background: linear-gradient(135deg, hsl(210 70% 65%) 0%, hsl(210 80% 75%) 50%, hsl(210 70% 65%) 100%);
+    background: linear-gradient(135deg, hsl(200 80% 60%) 0%, hsl(200 85% 70%) 50%, hsl(200 80% 60%) 100%);
   }
   
   .wine-gradient {
@@ -132,16 +132,16 @@
   
   /* Enhanced shadows for depth */
   .shadow-warm {
-    box-shadow: 0 10px 25px -3px hsl(48 100% 50% / 0.1), 0 4px 6px -2px hsl(48 100% 50% / 0.05);
+    box-shadow: 0 10px 25px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
   }
   
   .shadow-gold {
-    box-shadow: 0 10px 25px -3px hsl(210 70% 65% / 0.2), 0 4px 6px -2px hsl(210 70% 65% / 0.1);
+    box-shadow: 0 10px 25px -3px hsl(200 85% 70% / 0.3), 0 4px 6px -2px hsl(200 85% 70% / 0.2);
   }
   
   /* Text effects */
   .text-gold-gradient {
-    background: linear-gradient(135deg, hsl(210 70% 65%) 0%, hsl(210 80% 75%) 50%, hsl(210 70% 65%) 100%);
+    background: linear-gradient(135deg, hsl(200 90% 75%) 0%, hsl(200 80% 65%) 50%, hsl(200 90% 75%) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -164,22 +164,22 @@
   /* Navigation enhancements */
   .nav-glass {
     backdrop-filter: blur(12px);
-    background: hsl(45 20% 97% / 0.9);
-    border-bottom: 1px solid hsl(210 70% 65% / 0.2);
+    background: hsl(20 15% 12% / 0.95);
+    border-bottom: 1px solid hsl(200 80% 65% / 0.3);
   }
   
   /* Button styles */
   .btn-primary {
-    @apply bg-blue-800 hover:bg-blue-900 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden;
   }
   
   .btn-secondary {
-    @apply gold-accent text-foreground font-semibold px-8 py-4 rounded-xl shadow-gold hover:shadow-warm transition-all duration-300 hover:-translate-y-1 relative overflow-hidden;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-gold hover:shadow-warm transition-all duration-300 hover:-translate-y-1 relative overflow-hidden;
   }
   
   /* Delivery buttons */
   .delivery-btn {
-    @apply bg-white p-3 rounded-xl hover:scale-105 transition-all duration-300 h-14 flex items-center justify-center shadow-warm hover:shadow-gold border border-border;
+    @apply bg-card p-3 rounded-xl hover:scale-105 transition-all duration-300 h-14 flex items-center justify-center shadow-warm hover:shadow-gold border border-border;
   }
   
   .delivery-btn img {
@@ -188,12 +188,12 @@
   
   /* Menu card styling */
   .menu-card {
-    @apply bg-white rounded-2xl p-6 shadow-warm hover:shadow-gold transition-all duration-300 border border-border hover:border-accent/30 hover:-translate-y-1;
+    @apply bg-card rounded-2xl p-6 shadow-warm hover:shadow-gold transition-all duration-300 border border-border hover:border-accent/50 hover:-translate-y-1;
   }
   
   /* Section dividers */
   .section-divider {
-    background: linear-gradient(90deg, transparent 0%, hsl(210 70% 65%) 20%, hsl(48 100% 50%) 50%, hsl(210 70% 65%) 80%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, hsl(35 45% 50%) 20%, hsl(200 85% 70%) 50%, hsl(35 45% 50%) 80%, transparent 100%);
     height: 2px;
     margin: 4rem 0;
   }

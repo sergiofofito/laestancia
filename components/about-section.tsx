@@ -1,9 +1,9 @@
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 lg:py-32 bg-background relative overflow-hidden">
+    <section id="about" className="py-20 lg:py-32 bg-gradient-to-br from-background to-muted relative overflow-hidden">
       {/* Background Pattern */}
       <div 
-        className="absolute inset-0 opacity-15"
+        className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `url('/images/background.png')`,
           backgroundRepeat: 'repeat',
@@ -15,17 +15,17 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="animate-fade-in-up">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-              <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 border border-secondary/50 mb-6">
+              <span className="font-inter text-sm font-medium text-accent tracking-widest uppercase">
                 Our Story
               </span>
             </div>
             
-            <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-8">
+            <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-foreground mb-8 text-center lg:text-left">
               A Taste of <span className="text-gold-gradient">Argentina/Uruguay</span> in Minneapolis
             </h2>
             
-            <div className="space-y-6 font-inter text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-6 font-inter text-lg text-foreground/80 leading-relaxed">
               <p>
                 At La Estancia (meaning "cattle ranch" in Spanish), we bring you the authentic flavors and warm hospitality of Argentina and Uruguay. 
                 Our passion for traditional South American cuisine drives every dish we create, every wine we pour, 
@@ -83,30 +83,30 @@ export function AboutSection() {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute top-4 left-4 w-16 h-16 border-2 border-secondary rounded-full bg-secondary/10 backdrop-blur-sm flex items-center justify-center">
-              <span className="font-inter text-secondary font-bold">AR</span>
+            <div className="absolute top-4 left-4 w-16 h-16 border-2 border-accent rounded-full bg-accent/20 backdrop-blur-sm flex items-center justify-center">
+              <span className="font-inter text-accent font-bold">AR</span>
             </div>
           </div>
         </div>
 
         {/* Stats Section */}
-        <div className="mt-20 pt-16 border-t border-border/50">
+        <div className="mt-20 pt-16 border-t border-border">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="animate-fade-in-up stagger-1">
               <div className="font-playfair text-3xl lg:text-4xl font-bold text-accent mb-2">15+</div>
-              <div className="font-inter text-sm text-muted-foreground uppercase tracking-widest">Years Experience</div>
+              <div className="font-inter text-sm text-foreground/70 uppercase tracking-widest">Years Experience</div>
             </div>
             <div className="animate-fade-in-up stagger-2">
               <div className="font-playfair text-3xl lg:text-4xl font-bold text-accent mb-2">50+</div>
-              <div className="font-inter text-sm text-muted-foreground uppercase tracking-widest">Signature Dishes</div>
+              <div className="font-inter text-sm text-foreground/70 uppercase tracking-widest">Signature Dishes</div>
             </div>
             <div className="animate-fade-in-up stagger-3">
               <div className="font-playfair text-3xl lg:text-4xl font-bold text-accent mb-2">100+</div>
-              <div className="font-inter text-sm text-muted-foreground uppercase tracking-widest">Wine Selection</div>
+              <div className="font-inter text-sm text-foreground/70 uppercase tracking-widest">Wine Selection</div>
             </div>
             <div className="animate-fade-in-up stagger-4">
               <div className="font-playfair text-3xl lg:text-4xl font-bold text-accent mb-2">5★</div>
-              <div className="font-inter text-sm text-muted-foreground uppercase tracking-widest">Customer Rating</div>
+              <div className="font-inter text-sm text-foreground/70 uppercase tracking-widest">Customer Rating</div>
             </div>
           </div>
         </div>

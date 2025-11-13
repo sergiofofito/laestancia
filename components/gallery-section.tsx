@@ -52,30 +52,33 @@ export function GallerySection() {
   ]
 
   return (
-    <section id="gallery" className="py-20 lg:py-32 bg-gradient-to-br from-background to-muted/20 relative">
-      {/* Background Pattern */}
+    <section id="gallery" className="py-20 lg:py-32 relative overflow-hidden">
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 opacity-15"
+        className="absolute inset-0"
         style={{
-          backgroundImage: `url('/images/background.png')`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '80px 80px'
+          backgroundImage: `url('/images/steak.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}
-      />
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/80 to-black/85" />
+      </div>
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-            <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 mb-6">
+            <span className="font-inter text-sm font-medium text-white tracking-widest uppercase">
               Visual Experience
             </span>
           </div>
           
-          <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-playfair text text-4xl lg:text-5xl font-bold text-white mb-6 text-center">
             Taste the <span className="text-gold-gradient">Tradition</span>
           </h2>
           
-          <p className="font-inter text-lg text-muted-foreground leading-relaxed">
+          <p className="font-inter text-lg text-white/90 leading-relaxed text-center">
             Every dish tells a story of Argentine culinary heritage. From our open kitchen to your table, 
             experience the artistry of authentic South American cuisine.
           </p>
@@ -130,7 +133,7 @@ export function GallerySection() {
               </div>
 
               {/* Decorative Corner */}
-              <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           ))}
         </div>
@@ -139,7 +142,7 @@ export function GallerySection() {
         <div className="text-center mt-16">
           <a
             href="/food"
-            className="btn-primary font-inter text-lg inline-flex items-center space-x-2 group"
+            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-inter text-lg font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 inline-flex items-center space-x-2 group"
           >
             <span>Explore Full Menu</span>
             <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>

@@ -1,6 +1,8 @@
+import { MapPin, Phone, Clock, Mail, Car, Accessibility, Wine, PartyPopper } from "lucide-react"
+
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-foreground text-white relative overflow-hidden">
+    <section id="contact" className="py-20 lg:py-32 bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-10"
@@ -42,8 +44,8 @@ export function ContactSection() {
           <div className="space-y-8 animate-fade-in-up">
             {/* Address */}
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-xl">📍</span>
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-400/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <MapPin className="h-6 w-6 text-white" />
               </div>
               <div>
                 <h3 className="font-playfair text-xl font-semibold mb-2">Location</h3>
@@ -56,14 +58,14 @@ export function ContactSection() {
 
             {/* Phone */}
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-xl">📞</span>
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-400/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <Phone className="h-6 w-6 text-white" />
               </div>
               <div>
                 <h3 className="font-playfair text-xl font-semibold mb-2">Phone</h3>
                 <a 
                   href="tel:+16122008377"
-                  className="font-inter text-secondary hover:text-accent transition-colors duration-300 text-lg"
+                  className="font-inter text-blue-400 hover:text-blue-300 transition-colors duration-300 text-lg"
                 >
                   (612) 200-8377
                 </a>
@@ -75,8 +77,8 @@ export function ContactSection() {
 
             {/* Hours */}
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-xl">🕒</span>
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-400/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <Clock className="h-6 w-6 text-white" />
               </div>
               <div>
                 <h3 className="font-playfair text-xl font-semibold mb-3">Hours</h3>
@@ -99,14 +101,14 @@ export function ContactSection() {
 
             {/* Email */}
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <span className="text-xl">✉️</span>
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-400/20 flex items-center justify-center flex-shrink-0 mt-1">
+                <Mail className="h-6 w-6 text-white" />
               </div>
               <div>
                 <h3 className="font-playfair text-xl font-semibold mb-2">Email</h3>
                 <a 
                   href="mailto:laestanciamn@gmail.com"
-                  className="font-inter text-secondary hover:text-accent transition-colors duration-300"
+                  className="font-inter text-blue-400 hover:text-blue-300 transition-colors duration-300"
                 >
                   laestanciamn@gmail.com
                 </a>
@@ -150,29 +152,29 @@ export function ContactSection() {
             {/* Special Features */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
-                <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <span className="text-lg">🚗</span>
+                <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-blue-500/20 flex items-center justify-center">
+                  <Car className="h-5 w-5 text-white" />
                 </div>
                 <div className="font-inter text-sm font-medium">Valet Parking</div>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
-                <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <span className="text-lg">♿</span>
+                <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-blue-500/20 flex items-center justify-center">
+                  <Accessibility className="h-5 w-5 text-white" />
                 </div>
                 <div className="font-inter text-sm font-medium">Accessible</div>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
-                <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <span className="text-lg">🍷</span>
+                <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-blue-500/20 flex items-center justify-center">
+                  <Wine className="h-5 w-5 text-white" />
                 </div>
                 <div className="font-inter text-sm font-medium">Full Bar</div>
               </div>
               
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
-                <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <span className="text-lg">🎉</span>
+                <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-blue-500/20 flex items-center justify-center">
+                  <PartyPopper className="h-5 w-5 text-white" />
                 </div>
                 <div className="font-inter text-sm font-medium">Private Events</div>
               </div>
@@ -229,8 +231,8 @@ export function ContactSection() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-secondary/10 to-transparent rounded-full -translate-x-16 -translate-y-16"></div>
-      <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-accent/10 to-transparent rounded-full translate-x-20 translate-y-20"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full -translate-x-16 -translate-y-16"></div>
+      <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-blue-600/10 to-transparent rounded-full translate-x-20 translate-y-20"></div>
     </section>
   )
 }

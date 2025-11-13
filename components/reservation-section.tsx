@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { UtensilsCrossed, Users, Phone, MapPin, Truck } from "lucide-react"
 
 export function ReservationSection() {
   return (
@@ -38,11 +39,11 @@ export function ReservationSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {/* Regular Dining */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 animate-fade-in-up stagger-1">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/30 to-accent/30 flex items-center justify-center">
-                <span className="text-2xl">🍽️</span>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                <UtensilsCrossed className="h-8 w-8 text-white" />
               </div>
               
-              <h3 className="font-playfair text-2xl font-bold mb-4">Regular Dining</h3>
+              <h3 className="font-playfair text-2xl font-bold mb-4 text-center">Regular Dining</h3>
               
               <p className="font-inter text-white/80 mb-6 leading-relaxed">
                 Experience our full menu in our elegant main dining room. Perfect for date nights, 
@@ -76,11 +77,11 @@ export function ReservationSection() {
 
             {/* Private Dining */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 animate-fade-in-up stagger-2">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/30 to-accent/30 flex items-center justify-center">
-                <span className="text-2xl">👥</span>
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                <Users className="h-8 w-8 text-white" />
               </div>
               
-              <h3 className="font-playfair text-2xl font-bold mb-4">Private Dining</h3>
+              <h3 className="font-playfair text-2xl font-bold mb-4 text-center">Private Dining</h3>
               
               <p className="font-inter text-white/80 mb-6 leading-relaxed">
                 Celebrate life's special moments with our private dining experience. 
@@ -103,7 +104,7 @@ export function ReservationSection() {
               </div>
               
               <a
-                href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn?date=2025-09-13&seats=2"
+                href="private-dining-minneapolis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full font-inter text-lg inline-flex items-center justify-center"
@@ -117,13 +118,13 @@ export function ReservationSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Phone Reservation */}
             <div className="text-center animate-fade-in-up stagger-3">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/20 flex items-center justify-center">
-                <span className="text-xl">📞</span>
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center">
+                <Phone className="h-6 w-6 text-white" />
               </div>
               <h4 className="font-playfair text-xl font-semibold mb-2">Call Us</h4>
               <a
                 href="tel:+16122008377"
-                className="font-inter text-lg text-secondary hover:text-accent transition-colors duration-300"
+                className="font-inter text-lg text-blue-400 hover:text-blue-300 transition-colors duration-300"
               >
                 (612) 200-8377
               </a>
@@ -134,8 +135,8 @@ export function ReservationSection() {
 
             {/* Location */}
             <div className="text-center animate-fade-in-up stagger-4">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/20 flex items-center justify-center">
-                <span className="text-xl">📍</span>
+              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center">
+                <MapPin className="h-6 w-6 text-white" />
               </div>
               <h4 className="font-playfair text-xl font-semibold mb-2">Visit Us</h4>
               <p className="font-inter text-lg text-white/90">
@@ -149,8 +150,11 @@ export function ReservationSection() {
 
           {/* Delivery Options */}
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 animate-fade-in-up stagger-4">
-            <h3 className="font-playfair text-2xl font-bold mb-4">Can't Join Us Tonight?</h3>
-            <p className="font-inter text-white/80 mb-6">
+            <div className="flex items-center justify-center mb-4">
+              <Truck className="h-8 w-8 text-white mr-3" />
+              <h3 className="font-playfair text-2xl font-bold text-center">Can't Join Us Tonight?</h3>
+            </div>
+            <p className="font-inter text-white/80 mb-6 text-center">
               Enjoy La Estancia at home with our delivery partners
             </p>
             
@@ -174,8 +178,8 @@ export function ReservationSection() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-1/4 left-8 w-2 h-32 bg-gradient-to-b from-secondary to-transparent opacity-30 hidden lg:block"></div>
-      <div className="absolute bottom-1/4 right-8 w-2 h-32 bg-gradient-to-t from-accent to-transparent opacity-30 hidden lg:block"></div>
+      <div className="absolute top-1/4 left-8 w-2 h-32 bg-gradient-to-b from-blue-500 to-transparent opacity-30 hidden lg:block"></div>
+      <div className="absolute bottom-1/4 right-8 w-2 h-32 bg-gradient-to-t from-blue-600 to-transparent opacity-30 hidden lg:block"></div>
     </section>
   )
 }
