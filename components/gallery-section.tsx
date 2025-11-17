@@ -1,55 +1,97 @@
 "use client"
 
-export function GallerySection() {
-  // Helper function to create optimized Cloudinary video URLs
-  const getOptimizedVideoUrl = (publicId: string) => {
-    return `https://res.cloudinary.com/dg1z5a9bi/video/upload/w_600,h_600,c_fill,q_auto:low,f_mp4,br_500k/${publicId}`;
-  };
+import { useEffect, useRef } from "react"
 
-  const images = [
+export function GallerySection() {
+  const playersRef = useRef<any[]>([])
+
+  const videos = [
     {
-      src: getOptimizedVideoUrl("v1758395427/IMG_1855_utnnt5"),
+      id: "ywK96b8LNO4",
       alt: "Premium ribeye steak with chimichurri",
       title: "Premium Cuts",
       description: "Perfectly grilled Argentine beef",
-      isVideo: true
     },
     {
-      src: getOptimizedVideoUrl("v1758395502/IMG_1863_bjvqic"),
+      id: "I19PLXMeIf4",
       alt: "Mixed grill parrillada",
       title: "Parrillada",
       description: "Traditional mixed grill experience",
-      isVideo: true
     },
     {
-      src: getOptimizedVideoUrl("v1758395390/IMG_1838_htffbd"),
+      id: "MBElpVf05RA",
       alt: "Argentine Malbec wine",
       title: "Fine Wines",
       description: "Curated selection of Argentine wines",
-      isVideo: true
     },
     {
-      src: getOptimizedVideoUrl("v1758395517/IMG_1875_g9vxuc"),
+      id: "MzGeZddkt_M",
       alt: "Golden empanadas",
       title: "Authentic Appetizers",
       description: "Handcrafted traditional empanadas",
-      isVideo: true
     },
     {
-      src: getOptimizedVideoUrl("v1758395422/IMG_1843_rtotim"),
+      id: "kwwoWrsDbm8",
       alt: "Milanesa Napolitana",
       title: "Signature Dishes",
       description: "Our famous Milanesa Napolitana",
-      isVideo: true
     },
     {
-      src: getOptimizedVideoUrl("v1758395402/IMG_1839_fa1zwv"),
+      id: "N7_c-yG7Z1g",
       alt: "Restaurant atmosphere video",
       title: "Experience La Estancia",
       description: "See our restaurant in action",
-      isVideo: true
     }
   ]
+
+  useEffect(() => {
+    // Load YouTube iframe API
+    const tag = document.createElement('script')
+    tag.src = 'https://www.youtube.com/iframe_api'
+    const firstScriptTag = document.getElementsByTagName('script')[0]
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag)
+
+    // Initialize players when API is ready
+    ;(window as any).onYouTubeIframeAPIReady = () => {
+      videos.forEach((video, index) => {
+        const player = new (window as any).YT.Player(`youtube-player-${index}`, {
+          videoId: video.id,
+          playerVars: {
+            autoplay: 1,
+            mute: 1,
+            controls: 0,
+            modestbranding: 1,
+            playsinline: 1,
+            rel: 0,
+            showinfo: 0,
+            iv_load_policy: 3,
+            disablekb: 1,
+            loop: 1,
+            playlist: video.id
+          },
+          events: {
+            onStateChange: (event: any) => {
+              // If video ends, restart it immediately
+              if (event.data === (window as any).YT.PlayerState.ENDED) {
+                event.target.seekTo(0)
+                event.target.playVideo()
+              }
+            }
+          }
+        })
+        playersRef.current.push(player)
+      })
+    }
+
+    return () => {
+      playersRef.current.forEach(player => {
+        if (player && player.destroy) {
+          player.destroy()
+        }
+      })
+      playersRef.current = []
+    }
+  }, [])
 
   return (
     <section id="gallery" className="py-20 lg:py-32 relative overflow-hidden">
@@ -86,48 +128,28 @@ export function GallerySection() {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {images.map((image, index) => (
+          {videos.map((video, index) => (
             <div
               key={index}
               className={`group relative overflow-hidden rounded-2xl shadow-warm hover:shadow-gold transition-all duration-500 hover:-translate-y-2 animate-fade-in-up stagger-${(index % 4) + 1}`}
             >
-              {/* Image or Video */}
+              {/* Video */}
               <div className="aspect-square overflow-hidden">
-                {image.isVideo ? (
-                  <video
-                    src={image.src}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    onLoadStart={(e) => {
-                      // Ensure video starts playing when it begins loading
-                      const video = e.target as HTMLVideoElement;
-                      video.play().catch(() => {
-                        // Silently handle autoplay failures
-                      });
-                    }}
-                  />
-                ) : (
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                )}
+                <div
+                  id={`youtube-player-${index}`}
+                  className="w-full h-full"
+                  style={{ pointerEvents: 'none' }}
+                />
               </div>
               
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <h3 className="font-playfair text-xl font-bold text-white mb-2">
-                    {image.title}
+                    {video.title}
                   </h3>
                   <p className="font-inter text-sm text-white/90">
-                    {image.description}
+                    {video.description}
                   </p>
                 </div>
               </div>
