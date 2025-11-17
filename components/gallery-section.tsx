@@ -7,37 +7,37 @@ export function GallerySection() {
 
   const videos = [
     {
-      id: "ywK96b8LNO4",
+      id: "onMuh-i8SKE",
       alt: "Premium ribeye steak with chimichurri",
       title: "Premium Cuts",
       description: "Perfectly grilled Argentine beef",
     },
     {
-      id: "I19PLXMeIf4",
+      id: "0j6Ka98VBOk",
       alt: "Mixed grill parrillada",
       title: "Parrillada",
       description: "Traditional mixed grill experience",
     },
     {
-      id: "MBElpVf05RA",
+      id: "E19nhOShlS0",
       alt: "Argentine Malbec wine",
       title: "Fine Wines",
       description: "Curated selection of Argentine wines",
     },
     {
-      id: "MzGeZddkt_M",
+      id: "O_qm-cC5yhs",
       alt: "Golden empanadas",
       title: "Authentic Appetizers",
       description: "Handcrafted traditional empanadas",
     },
     {
-      id: "kwwoWrsDbm8",
+      id: "zoB-OSqKZpw",
       alt: "Milanesa Napolitana",
       title: "Signature Dishes",
       description: "Our famous Milanesa Napolitana",
     },
     {
-      id: "N7_c-yG7Z1g",
+      id: "LLsZUMkdwdQ",
       alt: "Restaurant atmosphere video",
       title: "Experience La Estancia",
       description: "See our restaurant in action",
