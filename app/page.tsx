@@ -13,11 +13,28 @@ export default function HomePage() {
     <>
       <main className="min-h-screen">
         <Navigation />
-        <HeroSection />
-        <GallerySection />
-        <ServiceAreasSection />
-        <AboutSection />
-        <ReviewsSection />
+        
+        {/* Background wrapper for Hero through Reviews sections */}
+        <div className="relative">
+          <div 
+            className="absolute inset-0 opacity-15"
+            style={{
+              backgroundImage: `url('/images/background.png')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundAttachment: 'fixed'
+            }}
+          />
+          <div className="relative z-10">
+            <HeroSection />
+            <GallerySection />
+            <ServiceAreasSection />
+            <AboutSection />
+            <ReviewsSection />
+          </div>
+        </div>
+        
         <ReservationSection />
         <ContactSection />
       </main>

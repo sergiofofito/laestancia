@@ -1,16 +1,6 @@
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 lg:py-32 bg-gradient-to-br from-background to-muted relative overflow-hidden">
-      {/* Background Pattern */}
-      <div 
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `url('/images/background.png')`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '80px 80px'
-        }}
-      />
-
+    <section id="about" className="py-20 lg:py-32 bg-gradient-to-br from-background/50 to-muted/50 relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}

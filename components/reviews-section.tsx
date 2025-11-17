@@ -24,16 +24,7 @@ export function ReviewsSection() {
   ]
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-muted to-background relative">
-      {/* Background Pattern */}
-      <div 
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `url('/images/background.png')`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '80px 80px'
-        }}
-      />
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-muted/50 to-background/50 relative">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

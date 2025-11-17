@@ -94,9 +94,12 @@ export default function CateringServicesPage() {
         {/* Hero Section */}
         <section className="relative pt-20 pb-16 lg:pb-24 overflow-hidden no-global-bg">
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+            className="absolute inset-0 opacity-10"
             style={{
               backgroundImage: `url('/images/background.png')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background" />
