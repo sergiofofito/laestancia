@@ -22,10 +22,10 @@ export function Navigation() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Menu", href: "/food" },
-    { label: "Gallery", href: "#gallery" },
+    { label: "Gallery", href: "/#gallery" },
     { label: "About", href: "/meetowners" },
     { label: "Catering", href: "/catering-services" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/#contact" },
   ]
 
   return (

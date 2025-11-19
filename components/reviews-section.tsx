@@ -124,13 +124,17 @@ export function ReviewsSection() {
               </div>
               <div className="flex items-center justify-center lg:justify-end space-x-4">
                 <a 
-                  href="#" 
+                  href="https://www.google.com/maps/place/La+Estancia+Argentinean+-+Uruguayan+Steakhouse/@44.9161876,-93.2800748,17z/data=!4m8!3m7!1s0x87f627d6ed7f8ea3:0x2b22232b8f205c46!8m2!3d44.9161876!4d-93.2774999!9m1!1b1!16s%2Fg%2F11vybmwg3j?entry=ttu" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-card rounded-lg p-3 shadow-warm hover:shadow-gold transition-all duration-300 hover:-translate-y-1 border border-border"
                 >
                   <img src="/google-reviews-logo.jpg" alt="Google Reviews" className="h-8 w-auto" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.yelp.com/biz/la-estancia-argentinean-uruguayan-steakhouse-minneapolis" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-card rounded-lg p-3 shadow-warm hover:shadow-gold transition-all duration-300 hover:-translate-y-1 border border-border"
                 >
                   <img src="/yelp-reviews-logo.jpg" alt="Yelp Reviews" className="h-8 w-auto" />

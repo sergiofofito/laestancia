@@ -391,29 +391,8 @@ export default function MenuPage() {
                 </div>
               </div>
 
-              {/* Delivery Options */}
-              <div className="flex items-center justify-center mb-12">
-                <a
-                  href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-card p-6 rounded-xl hover:scale-105 transition-all duration-300 shadow-warm hover:shadow-gold border border-border w-full max-w-md group"
-                  aria-label="Order on Grubhub"
-                >
-                  <img src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" alt="Grubhub" className="w-full h-auto" />
-                </a>
-              </div>
 
-              {/* Private Dining CTA */}
-              <a
-                href="https://resy.com/cities/minneapolis-mn/venues/la-estancia-mn?date=2025-09-13&seats=2"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary font-inter text-lg inline-flex items-center space-x-2 mx-auto"
-              >
-                <span>Book Private Dining</span>
-                <span>→</span>
-              </a>
+
             </div>
           </div>
         </section>

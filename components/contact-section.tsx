@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Mail, Car, Accessibility, Wine, PartyPopper } from "lucide-react"
+import { MapPin, Phone, Clock, Mail, Car, Accessibility, Wine, PartyPopper, Instagram, Facebook, ChefHat, Map } from "lucide-react"
 
 export function ContactSection() {
   return (
@@ -84,15 +84,15 @@ export function ContactSection() {
                 <h3 className="font-playfair text-xl font-semibold mb-3">Hours</h3>
                 <div className="space-y-2 font-inter text-white/80">
                   <div className="flex justify-between">
-                    <span>Monday - Thurs</span>
+                    <span>Tuesday - Thursday</span>
                     <span className="font-bold ml-4">4:30 PM - 9:00 PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Friday - Sat</span>
+                    <span>Friday</span>
                     <span className="font-bold ml-4">4:30 PM - 10:00 PM</span>
                   </div>
                   <div className="flex justify-between border-t border-white/20 pt-2 mt-3">
-                    <span>Sunday Lunch</span>
+                    <span>Sunday & Saturday Lunch</span>
                     <span className="font-bold ml-4">12:00 PM - 8:00 PM</span>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors duration-300 text-sm font-medium"
                 >
-                  <span className="mr-2">🗺️</span>
+                  <Map className="h-4 w-4 mr-2" />
                   View Larger Map & Get Directions
                 </a>
               </div>
@@ -151,12 +151,7 @@ export function ContactSection() {
 
             {/* Special Features */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
-                <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-blue-500/20 flex items-center justify-center">
-                  <Car className="h-5 w-5 text-white" />
-                </div>
-                <div className="font-inter text-sm font-medium">Valet Parking</div>
-              </div>
+              
               
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
                 <div className="w-10 h-10 mx-auto mb-2 rounded-full bg-blue-500/20 flex items-center justify-center">
@@ -192,37 +187,44 @@ export function ContactSection() {
                 alt="La Estancia Logo"
                 className="h-12 w-auto"
               />
-              <div>
-                <img 
-                  src="/images/flagstogether.png" 
-                  alt="La Estancia Steakhouse" 
-                  className="h-6 w-auto mb-2 brightness-0 invert" 
-                />
-                <div className="font-inter text-sm opacity-70">© 2024 All rights reserved</div>
-              </div>
+              <div className="font-inter text-sm opacity-70">© 2024 All rights reserved</div>
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-6">
               <span className="font-inter text-sm opacity-70">Follow us:</span>
-              <div className="flex space-x-3">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                <div className="flex space-x-3">
+                  <a 
+                    href="https://www.facebook.com/laestanciamn" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                    title="La Estancia on Facebook"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/laestanciamn" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                    title="La Estancia on Instagram"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                </div>
+                <div className="h-6 w-px bg-white/20 hidden sm:block"></div>
                 <a 
-                  href="#" 
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                  href="https://www.instagram.com/thecheflui" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-300 group"
+                  title="Chef Lui on Instagram"
                 >
-                  <span>📘</span>
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
-                >
-                  <span>📷</span>
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
-                >
-                  <span>🐦</span>
+                  <ChefHat className="h-5 w-5" />
+                  <span className="font-inter text-sm font-medium">@thecheflui</span>
+                  <Instagram className="h-4 w-4 opacity-70 group-hover:opacity-100" />
                 </a>
               </div>
             </div>

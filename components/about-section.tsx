@@ -49,28 +49,6 @@ export function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
 
-            {/* Floating Elements */}
-            <div className="absolute -top-8 -right-8 w-32 h-32 rounded-2xl overflow-hidden shadow-gold rotate-12 hover:rotate-6 transition-transform duration-500">
-              <video
-                src="https://res.cloudinary.com/dg1z5a9bi/video/upload/v1758395515/IMG_1874_steg4s.mov"
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-            </div>
-
-            <div className="absolute -bottom-8 -left-8 w-40 h-32 rounded-2xl overflow-hidden shadow-gold -rotate-6 hover:rotate-0 transition-transform duration-500">
-              <video
-                src="https://res.cloudinary.com/dg1z5a9bi/video/upload/v1758395502/IMG_1863_bjvqic.mov"
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-            </div>
 
             {/* Decorative Elements */}
             <div className="absolute top-4 left-4 w-16 h-16 border-2 border-accent rounded-full bg-accent/20 backdrop-blur-sm flex items-center justify-center">

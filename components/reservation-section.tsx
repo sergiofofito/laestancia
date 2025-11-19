@@ -142,9 +142,7 @@ export function ReservationSection() {
               <p className="font-inter text-lg text-white/90">
                 4751 Nicollet Ave, Minneapolis
               </p>
-              <p className="font-inter text-sm text-white/70 mt-2">
-                Valet parking available
-              </p>
+           
             </div>
           </div>
 

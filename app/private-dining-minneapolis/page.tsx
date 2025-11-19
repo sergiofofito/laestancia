@@ -166,10 +166,7 @@ export default function PrivateDiningMinneapolisPage() {
                         <Clock className="h-5 w-5 text-accent" />
                         Available 7 days a week
                       </p>
-                      <p className="flex items-center gap-2">
-                        <Car className="h-5 w-5 text-accent" />
-                        Valet parking available
-                      </p>
+    
                       <p className="flex items-center gap-2">
                         <Train className="h-5 w-5 text-accent" />
                         Near downtown Minneapolis transit

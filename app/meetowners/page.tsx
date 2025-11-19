@@ -7,20 +7,23 @@ import { Instagram, Linkedin, Truck, Users, Phone, Mail } from "lucide-react"
 export default function MeetOwnersPage() {
   return (
     <>
-      <main className="min-h-screen">
+      <main className="min-h-screen relative">
         <Navigation />
         
+        {/* Global Background */}
+        <div 
+          className="fixed inset-0 opacity-15 -z-10"
+          style={{
+            backgroundImage: `url('/images/background.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed'
+          }}
+        />
+        
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-background relative overflow-hidden">
-          {/* Background Pattern */}
-          <div 
-            className="absolute inset-0 opacity-5"
-            style={{
-              backgroundImage: `radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.3) 2px, transparent 2px),
-                               radial-gradient(circle at 75% 75%, rgba(139, 69, 19, 0.3) 2px, transparent 2px)`,
-              backgroundSize: '80px 80px'
-            }}
-          />
+        <section className="pt-32 pb-20 bg-gradient-to-br from-background/50 to-muted/50 relative overflow-hidden">
           
           <div className="container mx-auto px-6 lg:px-8 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
@@ -33,8 +36,8 @@ export default function MeetOwnersPage() {
                 />
               </div>
               
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-8 animate-fade-in-up stagger-1">
-                <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 border border-accent/50 mb-8 animate-fade-in-up stagger-1">
+                <span className="font-inter text-sm font-medium text-accent tracking-widest uppercase">
                   The Full Story
                 </span>
               </div>
@@ -43,11 +46,11 @@ export default function MeetOwnersPage() {
                 Who Are <span className="text-gold-gradient">We?</span>
               </h1>
               
-              <p className="font-inter text-xl lg:text-2xl text-muted-foreground leading-relaxed animate-fade-in-up stagger-3">
+              <p className="font-inter text-xl lg:text-2xl text-foreground/80 leading-relaxed animate-fade-in-up stagger-3">
                 La Estancia was founded by Daniel Larumbe, his wife Susana, and Chef Lui.
               </p>
               
-              <p className="font-inter text-lg text-muted-foreground mt-4 animate-fade-in-up stagger-4">
+              <p className="font-inter text-lg text-foreground/70 mt-4 animate-fade-in-up stagger-4">
                 Daniel and Susana, both originally from Uruguay, and Luis Del Hoyo from Argentina
               </p>
             </div>
@@ -55,7 +58,7 @@ export default function MeetOwnersPage() {
         </section>
 
         {/* Founders Section */}
-        <section className="py-20 lg:py-32 bg-muted/30 relative overflow-hidden">
+        <section className="py-20 lg:py-32 bg-gradient-to-br from-muted/50 to-background/50 relative overflow-hidden">
           <div className="container mx-auto px-6 lg:px-8 relative z-10">
             
             {/* Daniel and Susana */}
@@ -81,8 +84,8 @@ export default function MeetOwnersPage() {
               </div>
               
               <div className="animate-fade-in-up stagger-2">
-                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-                  <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 border border-accent/50 mb-6">
+                  <span className="font-inter text-sm font-medium text-accent tracking-widest uppercase">
                     Founders
                   </span>
                 </div>
@@ -91,7 +94,7 @@ export default function MeetOwnersPage() {
                   Daniel & <span className="text-gold-gradient">Susana</span> Larumbe
                 </h2>
                 
-                <div className="space-y-6 font-inter text-lg text-muted-foreground leading-relaxed">
+                <div className="space-y-6 font-inter text-lg text-foreground/80 leading-relaxed">
                   <p>
                     Daniel, a former professional soccer player for Minnesota United (formerly known as the Minnesota Thunder), 
                     and Susana always felt the need for a space where they could celebrate their culture with friends and 
@@ -127,8 +130,8 @@ export default function MeetOwnersPage() {
             {/* Chef Lui Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1 animate-fade-in-up">
-                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-                  <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+                <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 border border-accent/50 mb-6">
+                  <span className="font-inter text-sm font-medium text-accent tracking-widest uppercase">
                     Executive Chef
                   </span>
                 </div>
@@ -137,7 +140,7 @@ export default function MeetOwnersPage() {
                   Chef <span className="text-gold-gradient">Lui</span>
                 </h2>
                 
-                <div className="space-y-6 font-inter text-lg text-muted-foreground leading-relaxed">
+                <div className="space-y-6 font-inter text-lg text-foreground/80 leading-relaxed">
                   <p>
                     Chef Lui, a native Argentinean, brings extensive experience in the food and beverage industry. 
                     Having worked as a chef, general manager, and brand manager across the USA, Mexico, Brazil, 
@@ -158,26 +161,16 @@ export default function MeetOwnersPage() {
 
                 {/* Social Links */}
                 <div className="flex items-center space-x-4 mt-8">
-                  <span className="font-inter text-sm font-medium text-muted-foreground">@THECHEFLUI</span>
+                  <span className="font-inter text-sm font-medium text-foreground">@THECHEFLUI</span>
                   <div className="flex space-x-3">
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="text-muted-foreground hover:text-accent hover:bg-accent/10 transition-all duration-300"
+                      className="text-foreground hover:text-accent hover:bg-accent/10 transition-all duration-300"
                       asChild
                     >
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.instagram.com/thecheflui" target="_blank" rel="noopener noreferrer" title="Chef Lui on Instagram">
                         <Instagram className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="text-muted-foreground hover:text-accent hover:bg-accent/10 transition-all duration-300"
-                      asChild
-                    >
-                      <a href="#" target="_blank" rel="noopener noreferrer">
-                        <Linkedin className="h-5 w-5" />
                       </a>
                     </Button>
                   </div>
@@ -224,21 +217,12 @@ export default function MeetOwnersPage() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 lg:py-32 bg-background relative overflow-hidden">
-          {/* Background Pattern */}
-          <div 
-            className="absolute inset-0 opacity-5"
-            style={{
-              backgroundImage: `radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.3) 2px, transparent 2px),
-                               radial-gradient(circle at 75% 75%, rgba(139, 69, 19, 0.3) 2px, transparent 2px)`,
-              backgroundSize: '80px 80px'
-            }}
-          />
+        <section className="py-20 lg:py-32 bg-gradient-to-br from-background/50 to-muted/50 relative overflow-hidden">
           
           <div className="container mx-auto px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 mb-6">
-                <span className="font-inter text-sm font-medium text-muted-foreground tracking-widest uppercase">
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-secondary/30 to-accent/30 border border-accent/50 mb-6">
+                <span className="font-inter text-sm font-medium text-accent tracking-widest uppercase">
                   Our Services
                 </span>
               </div>
@@ -250,16 +234,16 @@ export default function MeetOwnersPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Delivery Service */}
-              <div className="bg-white rounded-2xl p-8 shadow-warm hover:shadow-gold transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                  <Truck className="h-8 w-8 text-accent" />
+              <div className="bg-card rounded-2xl p-8 shadow-warm hover:shadow-gold transition-all duration-300 hover:-translate-y-1 border border-border">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                  <Truck className="h-8 w-8 text-white" />
                 </div>
                 
                 <h3 className="font-playfair text-2xl lg:text-3xl font-bold text-foreground mb-4 text-center">
                   Delivery
                 </h3>
                 
-                <p className="font-inter text-lg text-muted-foreground leading-relaxed text-center mb-6">
+                <p className="font-inter text-lg text-foreground/80 leading-relaxed text-center mb-6">
                   Enjoy the convenience of having our delectable dishes delivered right to your doorstep. 
                   Perfect for busy days or cozy nights at home, our delivery service ensures that you can 
                   savor the authentic flavors of La Estancia wherever you are.
@@ -273,16 +257,16 @@ export default function MeetOwnersPage() {
               </div>
 
               {/* Private Dining */}
-              <div className="bg-white rounded-2xl p-8 shadow-warm hover:shadow-gold transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-accent" />
+              <div className="bg-card rounded-2xl p-8 shadow-warm hover:shadow-gold transition-all duration-300 hover:-translate-y-1 border border-border">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500/30 to-blue-400/30 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-white" />
                 </div>
                 
                 <h3 className="font-playfair text-2xl lg:text-3xl font-bold text-foreground mb-4 text-center">
                   Private Dining
                 </h3>
                 
-                <p className="font-inter text-lg text-muted-foreground leading-relaxed text-center mb-6">
+                <p className="font-inter text-lg text-foreground/80 leading-relaxed text-center mb-6">
                   Experience the luxury of a private dining experience with La Estancia. Whether it's a 
                   romantic dinner for two or a family celebration, our private dining service offers 
                   personalized menus, impeccable service, and an unforgettable culinary journey.
@@ -299,14 +283,14 @@ export default function MeetOwnersPage() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-muted/30 relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-muted/50 to-background/50 relative overflow-hidden">
           <div className="container mx-auto px-6 lg:px-8 relative z-10">
             <div className="text-center">
               <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-8">
                 Ready to Experience <span className="text-gold-gradient">La Estancia?</span>
               </h2>
               
-              <p className="font-inter text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p className="font-inter text-lg text-foreground/80 mb-8 max-w-2xl mx-auto">
                 Join us for an authentic taste of Argentina and Uruguay in the heart of Minneapolis. 
                 We look forward to sharing our passion and heritage with you.
               </p>

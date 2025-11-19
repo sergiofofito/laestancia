@@ -56,7 +56,7 @@ export function HeroSection() {
           
           {/* Location Badge */}
           <div className="inline-flex items-center mt-6 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <div className="w-2 h-2 bg-secondary rounded-full mr-3 animate-pulse"></div>
+            <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
             <span className="font-inter text-sm font-medium tracking-wide">Now Open • Minneapolis</span>
           </div>
         </div>

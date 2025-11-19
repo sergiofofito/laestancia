@@ -29,7 +29,7 @@ export default function HomePage() {
           <div className="relative z-10">
             <HeroSection />
             <GallerySection />
-            <ServiceAreasSection />
+            {/* <ServiceAreasSection /> */}
             <AboutSection />
             <ReviewsSection />
           </div>
