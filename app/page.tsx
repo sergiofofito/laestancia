@@ -6,6 +6,7 @@ import { AboutSection } from "@/components/about-section"
 import { ReviewsSection } from "@/components/reviews-section"
 import { ReservationSection } from "@/components/reservation-section"
 import { ContactSection } from "@/components/contact-section"
+import { LeadCapturePopup } from "@/components/lead-capture-popup"
 import Script from 'next/script'
 
 export default function HomePage() {
@@ -49,6 +50,8 @@ export default function HomePage() {
         src="https://unpkg.com/@elevenlabs/convai-widget-embed" 
         strategy="lazyOnload"
       />
+
+      <LeadCapturePopup />
     </>
   )
 }
