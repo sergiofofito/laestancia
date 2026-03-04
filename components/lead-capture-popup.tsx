@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { X, Gift, Sparkles, ChevronRight } from "lucide-react"
+import { X, ChevronRight } from "lucide-react"
 
 export function LeadCapturePopup() {
   const [isVisible, setIsVisible] = useState(false)
@@ -13,7 +13,6 @@ export function LeadCapturePopup() {
   useEffect(() => {
     const dismissed = localStorage.getItem("la-estancia-popup-dismissed")
     if (dismissed) return
-
     const timer = setTimeout(() => setIsVisible(true), 3500)
     return () => clearTimeout(timer)
   }, [])
@@ -24,7 +23,7 @@ export function LeadCapturePopup() {
       setIsVisible(false)
       setIsClosing(false)
       localStorage.setItem("la-estancia-popup-dismissed", "true")
-    }, 400)
+    }, 350)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,245 +54,313 @@ export function LeadCapturePopup() {
     <>
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm transition-opacity duration-400 ${
-          isClosing ? "opacity-0" : "opacity-100"
-        }`}
         onClick={handleClose}
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 100,
+          background: "rgba(0,0,0,0.75)",
+          backdropFilter: "blur(6px)",
+          transition: "opacity 350ms ease",
+          opacity: isClosing ? 0 : 1,
+        }}
       />
 
-      {/* Modal */}
+      {/* Modal container */}
       <div
-        className={`fixed z-[101] inset-0 flex items-center justify-center px-4 pointer-events-none`}
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 101,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "1rem",
+          pointerEvents: "none",
+        }}
       >
         <div
-          className={`pointer-events-auto relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl
-            transition-all duration-400
-            ${isClosing ? "opacity-0 scale-95 translate-y-4" : "opacity-100 scale-100 translate-y-0"}
-          `}
           style={{
-            background:
-              "linear-gradient(160deg, hsl(20 25% 14%) 0%, hsl(20 18% 10%) 100%)",
-            border: "1px solid hsl(35 45% 40% / 0.4)",
-            boxShadow:
-              "0 32px 80px -12px rgba(0,0,0,0.8), 0 0 0 1px hsl(200 80% 65% / 0.1), inset 0 1px 0 hsl(200 80% 65% / 0.15)",
+            pointerEvents: "auto",
+            position: "relative",
+            width: "100%",
+            maxWidth: "460px",
+            background: "#0c0a09",
+            border: "1px solid rgba(255,255,255,0.07)",
+            boxShadow: "0 40px 100px -20px rgba(0,0,0,0.9), 0 0 0 1px rgba(255,255,255,0.04)",
+            transition: "opacity 350ms ease, transform 350ms ease",
+            opacity: isClosing ? 0 : 1,
+            transform: isClosing ? "translateY(12px) scale(0.97)" : "translateY(0) scale(1)",
           }}
         >
-          {/* Top decorative bar */}
-          <div
-            className="h-1 w-full"
-            style={{
-              background:
-                "linear-gradient(90deg, hsl(35 45% 50%) 0%, hsl(200 85% 65%) 50%, hsl(35 45% 50%) 100%)",
-            }}
-          />
+          {/* Gold top accent line */}
+          <div style={{
+            height: "1px",
+            background: "linear-gradient(90deg, transparent 0%, hsl(35 55% 52%) 30%, hsl(40 60% 60%) 50%, hsl(35 55% 52%) 70%, transparent 100%)",
+          }} />
 
-          {/* Close button */}
+          {/* Close */}
           <button
             onClick={handleClose}
             aria-label="Close"
-            className="absolute top-5 right-5 w-8 h-8 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all duration-200"
+            style={{
+              position: "absolute",
+              top: "1.25rem",
+              right: "1.25rem",
+              width: "2rem",
+              height: "2rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "rgba(255,255,255,0.3)",
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              transition: "color 200ms ease",
+            }}
+            onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
+            onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
           >
-            <X className="w-4 h-4" />
+            <X size={15} strokeWidth={1.5} />
           </button>
 
-          <div className="px-8 pt-8 pb-10">
+          <div style={{ padding: "2.5rem 2.5rem 2.75rem" }}>
             {!submitted ? (
               <>
-                {/* Icon badge */}
-                <div className="flex justify-center mb-5">
-                  <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, hsl(200 80% 65% / 0.25) 0%, hsl(35 45% 50% / 0.25) 100%)",
-                      border: "1px solid hsl(200 80% 65% / 0.3)",
-                      boxShadow: "0 8px 24px -4px hsl(200 80% 65% / 0.2)",
-                    }}
-                  >
-                    <Gift className="w-7 h-7 text-blue-300" />
-                  </div>
-                </div>
+                {/* Eyebrow */}
+                <p style={{
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontSize: "10px",
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  color: "hsl(35 55% 52%)",
+                  marginBottom: "1rem",
+                }}>
+                  La Estancia — Members Only
+                </p>
 
                 {/* Headline */}
-                <div className="text-center mb-7">
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4 text-xs font-medium tracking-widest uppercase"
-                    style={{
-                      background: "hsl(200 80% 65% / 0.12)",
-                      border: "1px solid hsl(200 80% 65% / 0.25)",
-                      color: "hsl(200 90% 75%)",
-                    }}
-                  >
-                    <Sparkles className="w-3 h-3" />
-                    Exclusive Insider Access
-                  </div>
+                <h2 style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.6rem, 4vw, 2rem)",
+                  fontWeight: 400,
+                  lineHeight: 1.2,
+                  color: "hsl(40 20% 93%)",
+                  marginBottom: "0.75rem",
+                  letterSpacing: "-0.01em",
+                }}>
+                  Exceptional dining,<br />
+                  <em style={{ fontStyle: "italic", color: "hsl(40 20% 75%)" }}>exceptional value.</em>
+                </h2>
 
-                  <h2
-                    className="font-playfair text-3xl font-bold mb-3 leading-tight"
-                    style={{ color: "hsl(40 20% 92%)" }}
-                  >
-                    Unlock{" "}
-                    <span
-                      style={{
-                        background:
-                          "linear-gradient(135deg, hsl(200 90% 75%) 0%, hsl(35 60% 65%) 100%)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        backgroundClip: "text",
-                      }}
-                    >
-                      Members-Only
-                    </span>{" "}
-                    Deals
-                  </h2>
+                {/* Sub-copy */}
+                <p style={{
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontSize: "13px",
+                  lineHeight: 1.7,
+                  color: "rgba(255,255,255,0.42)",
+                  marginBottom: "1.75rem",
+                }}>
+                  Join our guest list for priority reservations, exclusive offers,
+                  and early access to private events — curated for those who appreciate the finest.
+                </p>
 
-                  <p
-                    className="font-inter text-sm leading-relaxed"
-                    style={{ color: "hsl(40 15% 65%)" }}
-                  >
-                    Join the La Estancia inner circle — get exclusive discounts,
-                    early access to special events, and curated offers delivered
-                    straight to you.
-                  </p>
-                </div>
+                {/* Thin divider */}
+                <div style={{
+                  height: "1px",
+                  background: "rgba(255,255,255,0.07)",
+                  marginBottom: "1.75rem",
+                }} />
 
-                {/* Value props */}
-                <div className="grid grid-cols-3 gap-3 mb-7">
-                  {[
-                    { emoji: "🥩", label: "Priority reservations" },
-                    { emoji: "🍷", label: "Wine & dining specials" },
-                    { emoji: "🎉", label: "Event early access" },
-                  ].map(({ emoji, label }) => (
-                    <div
-                      key={label}
-                      className="rounded-xl p-3 text-center"
-                      style={{
-                        background: "hsl(20 20% 18% / 0.8)",
-                        border: "1px solid hsl(30 20% 28% / 0.6)",
-                      }}
-                    >
-                      <div className="text-xl mb-1">{emoji}</div>
-                      <p
-                        className="font-inter text-[10px] leading-tight"
-                        style={{ color: "hsl(40 15% 60%)" }}
-                      >
-                        {label}
-                      </p>
-                    </div>
+                {/* Perks — inline text list */}
+                <div style={{
+                  display: "flex",
+                  gap: "1.5rem",
+                  marginBottom: "2rem",
+                  flexWrap: "wrap",
+                }}>
+                  {["Priority seating", "Exclusive offers", "Private event access"].map((perk, i) => (
+                    <span key={i} style={{
+                      fontFamily: "'Open Sans', sans-serif",
+                      fontSize: "11px",
+                      letterSpacing: "0.08em",
+                      color: "rgba(255,255,255,0.35)",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.4rem",
+                    }}>
+                      <span style={{
+                        display: "inline-block",
+                        width: "3px",
+                        height: "3px",
+                        borderRadius: "50%",
+                        background: "hsl(35 55% 52%)",
+                        flexShrink: 0,
+                      }} />
+                      {perk}
+                    </span>
                   ))}
                 </div>
 
                 {/* Form */}
-                <form onSubmit={handleSubmit} className="space-y-3">
+                <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
                   {[
-                    { name: "name", type: "text", placeholder: "Your name", autoComplete: "name" },
-                    { name: "email", type: "email", placeholder: "Email address", autoComplete: "email" },
-                    { name: "phone", type: "tel", placeholder: "Phone number (optional)", autoComplete: "tel" },
+                    { name: "name",  type: "text",  placeholder: "Full name",           autoComplete: "name",  required: true  },
+                    { name: "email", type: "email", placeholder: "Email address",        autoComplete: "email", required: true  },
+                    { name: "phone", type: "tel",   placeholder: "Phone  (optional)",    autoComplete: "tel",   required: false },
                   ].map((field) => (
-                    <input
-                      key={field.name}
-                      name={field.name}
-                      type={field.type}
-                      placeholder={field.placeholder}
-                      autoComplete={field.autoComplete}
-                      value={form[field.name as keyof typeof form]}
-                      onChange={handleChange}
-                      required={field.name !== "phone"}
-                      className="w-full px-4 py-3 rounded-xl font-inter text-sm outline-none transition-all duration-200 placeholder:opacity-40"
-                      style={{
-                        background: "hsl(20 20% 16%)",
-                        border: "1px solid hsl(30 20% 28%)",
-                        color: "hsl(40 20% 90%)",
-                      }}
-                      onFocus={(e) => {
-                        e.currentTarget.style.border = "1px solid hsl(200 80% 65% / 0.6)"
-                        e.currentTarget.style.boxShadow = "0 0 0 3px hsl(200 80% 65% / 0.1)"
-                      }}
-                      onBlur={(e) => {
-                        e.currentTarget.style.border = "1px solid hsl(30 20% 28%)"
-                        e.currentTarget.style.boxShadow = "none"
-                      }}
-                    />
+                    <div key={field.name} style={{ position: "relative" }}>
+                      <input
+                        name={field.name}
+                        type={field.type}
+                        placeholder={field.placeholder}
+                        autoComplete={field.autoComplete}
+                        value={form[field.name as keyof typeof form]}
+                        onChange={handleChange}
+                        required={field.required}
+                        style={{
+                          width: "100%",
+                          background: "transparent",
+                          border: "none",
+                          borderBottom: "1px solid rgba(255,255,255,0.12)",
+                          padding: "0.6rem 0",
+                          fontFamily: "'Open Sans', sans-serif",
+                          fontSize: "13px",
+                          color: "hsl(40 20% 90%)",
+                          outline: "none",
+                          boxSizing: "border-box",
+                          transition: "border-color 200ms ease",
+                        }}
+                        onFocus={e => (e.currentTarget.style.borderBottomColor = "hsl(35 55% 52%)")}
+                        onBlur={e => (e.currentTarget.style.borderBottomColor = "rgba(255,255,255,0.12)")}
+                      />
+                    </div>
                   ))}
+
+                  <style>{`
+                    input::placeholder { color: rgba(255,255,255,0.22); }
+                    input:-webkit-autofill {
+                      -webkit-box-shadow: 0 0 0 1000px #0c0a09 inset !important;
+                      -webkit-text-fill-color: hsl(40 20% 90%) !important;
+                    }
+                  `}</style>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-inter font-semibold text-sm tracking-wide transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
                     style={{
-                      background:
-                        "linear-gradient(135deg, hsl(200 80% 55%) 0%, hsl(200 80% 65%) 100%)",
-                      color: "#fff",
-                      boxShadow: "0 8px 20px -4px hsl(200 80% 60% / 0.45)",
+                      marginTop: "0.25rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "0.5rem",
+                      width: "100%",
+                      padding: "0.9rem 1.5rem",
+                      background: "hsl(35 55% 52%)",
+                      color: "#0c0a09",
+                      border: "none",
+                      fontFamily: "'Open Sans', sans-serif",
+                      fontSize: "11px",
+                      fontWeight: 700,
+                      letterSpacing: "0.18em",
+                      textTransform: "uppercase",
+                      cursor: loading ? "not-allowed" : "pointer",
+                      opacity: loading ? 0.6 : 1,
+                      transition: "background 200ms ease, opacity 200ms ease",
                     }}
+                    onMouseEnter={e => { if (!loading) e.currentTarget.style.background = "hsl(35 60% 58%)" }}
+                    onMouseLeave={e => { e.currentTarget.style.background = "hsl(35 55% 52%)" }}
                   >
                     {loading ? (
-                      <span className="animate-spin w-4 h-4 border-2 border-white/30 border-t-white rounded-full inline-block" />
+                      <span style={{
+                        width: "14px", height: "14px",
+                        border: "2px solid rgba(0,0,0,0.2)",
+                        borderTopColor: "#0c0a09",
+                        borderRadius: "50%",
+                        display: "inline-block",
+                        animation: "spin 0.7s linear infinite",
+                      }} />
                     ) : (
                       <>
-                        Claim My Exclusive Access
-                        <ChevronRight className="w-4 h-4" />
+                        Request Access
+                        <ChevronRight size={13} strokeWidth={2.5} />
                       </>
                     )}
                   </button>
+                  <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
                 </form>
 
-                <p
-                  className="font-inter text-[10px] text-center mt-4"
-                  style={{ color: "hsl(40 15% 45%)" }}
-                >
-                  No spam, ever. Unsubscribe anytime. We respect your privacy.
+                <p style={{
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontSize: "10px",
+                  color: "rgba(255,255,255,0.2)",
+                  textAlign: "center",
+                  marginTop: "1.25rem",
+                  letterSpacing: "0.03em",
+                }}>
+                  Your information is never shared. Unsubscribe at any time.
                 </p>
               </>
             ) : (
-              /* Success state */
-              <div className="text-center py-6">
-                <div className="flex justify-center mb-5">
-                  <div
-                    className="w-20 h-20 rounded-full flex items-center justify-center text-4xl"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, hsl(200 80% 65% / 0.2) 0%, hsl(35 45% 50% / 0.2) 100%)",
-                      border: "1px solid hsl(200 80% 65% / 0.3)",
-                    }}
-                  >
-                    🥂
-                  </div>
-                </div>
-                <h2
-                  className="font-playfair text-3xl font-bold mb-3"
-                  style={{ color: "hsl(40 20% 92%)" }}
-                >
-                  Welcome to the{" "}
-                  <span
-                    style={{
-                      background:
-                        "linear-gradient(135deg, hsl(200 90% 75%) 0%, hsl(35 60% 65%) 100%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                  >
-                    Inner Circle
-                  </span>
+              /* ── Success state ── */
+              <div style={{ textAlign: "center", padding: "1rem 0" }}>
+                {/* Thin ornamental line */}
+                <div style={{
+                  width: "40px",
+                  height: "1px",
+                  background: "hsl(35 55% 52%)",
+                  margin: "0 auto 1.75rem",
+                }} />
+
+                <h2 style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "1.75rem",
+                  fontWeight: 400,
+                  color: "hsl(40 20% 93%)",
+                  marginBottom: "0.75rem",
+                  letterSpacing: "-0.01em",
+                }}>
+                  {form.name ? `Welcome, ${form.name}.` : "You're on the list."}
                 </h2>
-                <p
-                  className="font-inter text-sm leading-relaxed mb-6"
-                  style={{ color: "hsl(40 15% 65%)" }}
-                >
-                  {form.name ? `${form.name}, you're` : "You're"} officially on the list. Expect
-                  exclusive deals, priority booking, and curated invitations from
-                  La Estancia straight to your inbox.
+
+                <p style={{
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontSize: "13px",
+                  lineHeight: 1.7,
+                  color: "rgba(255,255,255,0.42)",
+                  marginBottom: "2rem",
+                  maxWidth: "300px",
+                  margin: "0 auto 2rem",
+                }}>
+                  Expect priority access, curated offers, and exclusive invitations
+                  from La Estancia — arriving shortly.
                 </p>
+
                 <button
                   onClick={handleClose}
-                  className="font-inter text-sm font-medium px-8 py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
                   style={{
-                    background: "hsl(20 20% 22%)",
-                    color: "hsl(40 20% 80%)",
-                    border: "1px solid hsl(30 20% 32%)",
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontSize: "10px",
+                    fontWeight: 700,
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    color: "rgba(255,255,255,0.35)",
+                    background: "transparent",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    padding: "0.7rem 2rem",
+                    cursor: "pointer",
+                    transition: "color 200ms ease, border-color 200ms ease",
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.color = "rgba(255,255,255,0.7)"
+                    e.currentTarget.style.borderColor = "rgba(255,255,255,0.25)"
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.color = "rgba(255,255,255,0.35)"
+                    e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"
                   }}
                 >
-                  Take me to the site
+                  Continue
                 </button>
               </div>
             )}
