@@ -191,7 +191,7 @@ export function ReservationSection() {
                 aria-label="Order on Uber Eats"
               >
                 <img
-                  src="https://logos-world.net/wp-content/uploads/2020/05/Uber-Eats-Logo.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Uber_Eats_2020_logo.svg"
                   alt="Uber Eats"
                   className="h-8 w-auto object-contain brightness-0 invert"
                 />
