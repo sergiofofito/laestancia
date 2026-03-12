@@ -156,18 +156,44 @@ export function ReservationSection() {
               Enjoy La Estancia at home with our delivery partners
             </p>
             
-            <div className="flex items-center justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
               <a
                 href="https://www.grubhub.com/restaurant/la-estancia-argentinean-4751-nicollet-avenue-minneapolis/10074440"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 w-full max-w-md"
+                className="bg-white/10 backdrop-blur-sm p-5 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 flex items-center justify-center h-20"
                 aria-label="Order on Grubhub"
               >
-                <img 
-                  src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png" 
-                  alt="Grubhub" 
-                  className="w-full h-auto" 
+                <img
+                  src="https://logos-world.net/wp-content/uploads/2021/08/Grubhub-Logo.png"
+                  alt="Grubhub"
+                  className="h-8 w-auto object-contain"
+                />
+              </a>
+              <a
+                href="https://www.doordash.com/en/store/la-estancia-minneapolis-39610682/97907946/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 backdrop-blur-sm p-5 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 flex items-center justify-center h-20"
+                aria-label="Order on DoorDash"
+              >
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/doordash-1.svg"
+                  alt="DoorDash"
+                  className="h-8 w-auto object-contain brightness-0 invert"
+                />
+              </a>
+              <a
+                href="https://www.ubereats.com/store/la-estancia-mn/VUjEZZC0Xxej_ArwkpHFwA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 backdrop-blur-sm p-5 rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20 flex items-center justify-center h-20"
+                aria-label="Order on Uber Eats"
+              >
+                <img
+                  src="https://logos-world.net/wp-content/uploads/2020/05/Uber-Eats-Logo.png"
+                  alt="Uber Eats"
+                  className="h-8 w-auto object-contain brightness-0 invert"
                 />
               </a>
             </div>
